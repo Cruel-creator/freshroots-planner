@@ -1,0 +1,6 @@
+# Runtime (also what Vercel installs for the API function). Dev tools: requirements-dev.txt
+pandas>=2.2
+numpy>=1.26
+fastapi>=0.115
+uvicorn>=0.30
+psycopg[binary]>=3.2

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node / build output (Vercel builds web/dist itself)
+node_modules/
+web/dist/
+
+# Local data and secrets
+data/*.db
+.env
+.env.*
+.vercel/
+
+# Local tooling and personal files
+.claude/
+.playwright-cli/
+.impeccable/review/
+docs/*.pdf
+deliverables/

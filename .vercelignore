@@ -1,0 +1,10 @@
+# Local-only entry points and tooling; the deployment needs only web/, api/, freshroots/, data/raw/.
+app.py
+serve.py
+.streamlit/
+scripts/
+tests/
+reports/
+docs/
+.impeccable/
+requirements-dev.txt

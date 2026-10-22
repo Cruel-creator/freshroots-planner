@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T07:20:00Z",
+  "title": "Design System: Freshroots Planner",
+  "extensions": {
+    "colorMeta": {
+      "brand": { "role": "primary", "displayName": "Freshroots Green", "canonical": "#15803d", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#f0fdf4"] },
+      "brand-hover": { "role": "primary", "displayName": "Deep Green", "canonical": "#166534", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#f0fdf4"] },
+      "brand-soft": { "role": "primary", "displayName": "Green Wash", "canonical": "#e8f5ec", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#e8f5ec"] },
+      "brand-ink": { "role": "primary", "displayName": "Forest Ink", "canonical": "#14532d", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#f0fdf4"] },
+      "canvas": { "role": "neutral", "displayName": "Cool Canvas", "canonical": "#f5f6f8", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f5f6f8"] },
+      "card": { "role": "neutral", "displayName": "Card White", "canonical": "#ffffff", "tonalRamp": ["#111827", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb", "#ffffff"] },
+      "sunken": { "role": "neutral", "displayName": "Sunken", "canonical": "#f9fafb", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#111827", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
+      "ink-2": { "role": "neutral", "displayName": "Slate Ink", "canonical": "#4b5563", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
+      "ink-3": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#6b7280", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#e5e7eb", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
+      "line-soft": { "role": "neutral", "displayName": "Soft Hairline", "canonical": "#f0f1f3", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f0f1f3"] },
+      "ok": { "role": "state", "displayName": "Good Green", "canonical": "#16a34a", "tonalRamp": ["#052e16", "#14532d", "#15803d", "#16a34a", "#4ade80", "#86efac", "#bbf7d0", "#e7f6ec"] },
+      "ok-ink": { "role": "state", "displayName": "Good Green Ink", "canonical": "#15803d", "tonalRamp": ["#052e16", "#14532d", "#15803d", "#16a34a", "#4ade80", "#86efac", "#bbf7d0", "#e7f6ec"] },
+      "ok-soft": { "role": "state", "displayName": "Good Green Wash", "canonical": "#e7f6ec", "tonalRamp": ["#052e16", "#14532d", "#15803d", "#16a34a", "#4ade80", "#86efac", "#bbf7d0", "#e7f6ec"] },
+      "warn": { "role": "state", "displayName": "Warning Amber", "canonical": "#d97706", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fdf3e2"] },
+      "warn-ink": { "role": "state", "displayName": "Amber Ink", "canonical": "#b45309", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fdf3e2"] },
+      "warn-soft": { "role": "state", "displayName": "Amber Wash", "canonical": "#fdf3e2", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fdf3e2"] },
+      "crit": { "role": "state", "displayName": "Critical Red", "canonical": "#dc2626", "tonalRamp": ["#450a0a", "#7f1d1d", "#b91c1c", "#dc2626", "#f87171", "#fca5a5", "#fecaca", "#fdecec"] },
+      "crit-ink": { "role": "state", "displayName": "Critical Ink", "canonical": "#b91c1c", "tonalRamp": ["#450a0a", "#7f1d1d", "#b91c1c", "#dc2626", "#f87171", "#fca5a5", "#fecaca", "#fdecec"] },
+      "crit-soft": { "role": "state", "displayName": "Critical Wash", "canonical": "#fdecec", "tonalRamp": ["#450a0a", "#7f1d1d", "#b91c1c", "#dc2626", "#f87171", "#fca5a5", "#fecaca", "#fdecec"] },
+      "series-slate": { "role": "data", "displayName": "Series Slate", "canonical": "#334155", "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f8fafc"] },
+      "series-teal": { "role": "data", "displayName": "Series Teal", "canonical": "#0f766e", "tonalRamp": ["#042f2e", "#134e4a", "#0f766e", "#0d9488", "#2dd4bf", "#5eead4", "#99f6e4", "#f0fdfa"] },
+      "series-amber": { "role": "data", "displayName": "Series Amber", "canonical": "#d97706", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fffbeb"] },
+      "series-mist": { "role": "data", "displayName": "Series Mist", "canonical": "#94a3b8", "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f8fafc"] }
+    },
+    "typographyMeta": {
+      "kpi": { "displayName": "KPI value", "purpose": "KPI row figures (22px under 640px); figure tiles use 24px. Counts up once on load." },
+      "headline": { "displayName": "Headline", "purpose": "The welcome strip line only; 20px on phones." },
+      "page-title": { "displayName": "Page title", "purpose": "Sticky header h1, paired with a 12.5px muted crumb." },
+      "title": { "displayName": "Card title", "purpose": "Card titles, above a 12.5px muted sub-line." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs, capped at 72ch." },
+      "table": { "displayName": "Table", "purpose": "Data table cells; numeric columns right-aligned and tabular." },
+      "label": { "displayName": "Label", "purpose": "KPI labels, notes, captions, legends, crumbs." },
+      "column-head": { "displayName": "Column head", "purpose": "Sentence-case table headers on the sunken band." },
+      "mono": { "displayName": "Mono", "purpose": "Inline formula code only." }
+    },
+    "shadows": [
+      { "name": "resting", "value": "0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04)", "purpose": "Cards, KPI cards, welcome strip, secondary buttons. Must stay invisible at a glance." },
+      { "name": "overlay", "value": "0 12px 32px rgba(16, 24, 40, 0.12)", "purpose": "SKU drawer, toast, off-canvas sidebar." },
+      { "name": "primary-lift", "value": "0 1px 2px rgba(21, 128, 61, 0.25)", "purpose": "Primary buttons only." },
+      { "name": "focus-halo", "value": "0 0 0 3px rgba(21, 128, 61, 0.15)", "purpose": "Focused inputs, selects and search, with a green border." },
+      { "name": "segment-pressed", "value": "0 1px 2px rgba(16, 24, 40, 0.1)", "purpose": "The pressed segment of a segmented control." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Shared curve for page entry, drawer, toast, reveals, meters and disclosure chevrons (GSAP uses expo.out)." },
+      { "name": "smooth-scroll", "value": "Lenis lerp 0.1 on the GSAP ticker, ScrollTrigger synced", "purpose": "Inertial page scroll; stopped while the mobile nav is open." },
+      { "name": "card-entrance", "value": "y 14px, opacity 0 -> 1, 0.7s expo.out, 35ms stagger", "purpose": "On-screen cards on page render; below-fold cards released by IntersectionObserver." },
+      { "name": "count-up", "value": "1.2s", "purpose": "KPI numerals count up once." },
+      { "name": "draw-on", "value": "stroke-dashoffset, 1.8s expo.out, ScrollTrigger top 85%, once", "purpose": "Chart lines draw on as they enter." },
+      { "name": "bar-grow", "value": "scale 0 -> 1, 1.1s expo.out, 25-35ms stagger, once", "purpose": "Chart columns and weeks-of-cover bars grow from zero." },
+      { "name": "donut-sweep", "value": "1.1s expo.out, 80ms stagger, once", "purpose": "Donut segments sweep in." },
+      { "name": "page-enter", "value": "0.5s ease-out, translateY 6px", "purpose": "Content well on route change." },
+      { "name": "drawer", "value": "0.5s ease-out transform", "purpose": "SKU drawer slide from the right." },
+      { "name": "control", "value": "0.15s", "purpose": "Colour, border and shadow transitions on buttons, inputs, nav items." },
+      { "name": "reduced-motion", "value": "all durations 0.001ms; GSAP, CountUp and DotGrid skipped", "purpose": "Every effect is optional; content is visible by default." }
+    ],
+    "breakpoints": [
+      { "name": "kpi-3", "value": "1280px" },
+      { "name": "spans-full", "value": "1100px" },
+      { "name": "sidebar-offcanvas", "value": "960px" },
+      { "name": "phone", "value": "640px" },
+      { "name": "table-stack", "value": "600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The green action: header action, approve, submit.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Review decisions</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 14px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; font-size: 13px; font-weight: 550; border-radius: 8px; border: 1px solid transparent; cursor: pointer; white-space: nowrap; transition: background-color 0.15s, color 0.15s, border-color 0.15s, transform 0.15s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:active { transform: scale(0.98); } .ds-btn:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; } .ds-btn-primary { background: var(--brand, #15803d); color: #fff; box-shadow: 0 1px 2px rgba(21, 128, 61, 0.25); } .ds-btn-primary:hover { background: var(--brand-hover, #166534); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Neutral companion action: navigation to lists, exports, small card-head actions.",
+      "html": "<button class=\"ds-btn-secondary\">All SKUs</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; height: 34px; padding: 0 14px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; font-size: 13px; font-weight: 550; border-radius: 8px; background: var(--card, #ffffff); color: var(--ink, #111827); border: 1px solid var(--line, #e5e7eb); box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04); cursor: pointer; transition: background-color 0.15s, transform 0.15s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-secondary:hover { background: var(--sunken, #f9fafb); } .ds-btn-secondary:active { transform: scale(0.98); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Reject actions; white with red ink, fills pale red on hover.",
+      "html": "<button class=\"ds-btn-danger\">Reject</button>",
+      "css": ".ds-btn-danger { display: inline-flex; align-items: center; height: 34px; padding: 0 14px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; font-size: 13px; font-weight: 550; border-radius: 8px; background: var(--card, #ffffff); color: var(--crit-ink, #b91c1c); border: 1px solid #f3c7c7; cursor: pointer; transition: background-color 0.15s; } .ds-btn-danger:hover { background: var(--crit-soft, #fdecec); } .ds-btn-danger:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; }"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "240px white sidebar: brand lock-up, icon nav with active green wash and amber pending counts.",
+      "html": "<nav class=\"ds-side\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-mark\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 20h10\"/><path d=\"M10 20c5.5-2.5.8-6.4 3-10\"/><path d=\"M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z\"/><path d=\"M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z\"/></svg></span><span>Freshroots<small>Demand planning</small></span></a><a class=\"ds-nav-item\" aria-current=\"page\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"9\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"5\" rx=\"1\"/><rect x=\"14\" y=\"12\" width=\"7\" height=\"9\" rx=\"1\"/><rect x=\"3\" y=\"16\" width=\"7\" height=\"5\" rx=\"1\"/></svg>Overview</a><a class=\"ds-nav-item\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/></svg>Exceptions<span class=\"ds-count\">1</span></a><a class=\"ds-nav-item\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/><path d=\"m9 14 2 2 4-4\"/></svg>Workbench<span class=\"ds-count\">15</span></a></nav>",
+      "css": ".ds-side { width: 240px; background: var(--card, #ffffff); border-right: 1px solid var(--line, #e5e7eb); padding: 18px 14px; display: flex; flex-direction: column; gap: 2px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-brand { display: flex; align-items: center; gap: 10px; padding: 4px 10px 18px; color: var(--ink, #111827); font-weight: 650; font-size: 15px; letter-spacing: -0.01em; text-decoration: none; } .ds-brand small { display: block; font-size: 11px; font-weight: 500; color: var(--ink-3, #6b7280); letter-spacing: 0; } .ds-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--brand, #15803d); color: #fff; display: grid; place-items: center; } .ds-nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px; color: var(--ink-2, #4b5563); font-weight: 500; font-size: 13.5px; text-decoration: none; transition: background-color 0.15s, color 0.15s; } .ds-nav-item:hover { background: var(--sunken, #f9fafb); color: var(--ink, #111827); } .ds-nav-item:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; } .ds-nav-item[aria-current=\"page\"] { background: var(--brand-soft, #e8f5ec); color: var(--brand-ink, #14532d); } .ds-count { margin-left: auto; font-size: 11px; font-weight: 600; background: var(--warn-soft, #fdf3e2); color: var(--warn-ink, #b45309); border-radius: 20px; padding: 1px 7px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "White field with hairline border; focus turns the border green with a soft green halo.",
+      "html": "<label class=\"ds-field\"><span>Reason</span><input class=\"ds-input\" placeholder=\"Why override this quantity?\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-field span { font-size: 12px; font-weight: 600; color: var(--ink-2, #4b5563); } .ds-input { font: inherit; font-size: 13.5px; color: var(--ink, #111827); background: var(--card, #ffffff); border: 1px solid var(--line, #e5e7eb); border-radius: 8px; padding: 8px 10px; transition: border-color 0.15s, box-shadow 0.15s; } .ds-input:focus, .ds-input:focus-visible { outline: none; border-color: var(--brand, #15803d); box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15); }"
+    },
+    {
+      "name": "Tags and State Dots",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Tinted tags for context; dot-plus-text states for recommendation and approval status.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-tag ds-tag-warn\">Festival month</span><span class=\"ds-tag\">15 SKUs</span><span class=\"ds-tag ds-tag-brand\">Rules v0.1.0</span><span class=\"ds-state ds-crit\">Reorder now</span><span class=\"ds-state ds-warn\">Pending planner review</span><span class=\"ds-state ds-ok\">Approved</span></div>",
+      "css": ".ds-row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-tag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11.5px; font-weight: 550; background: #f1f2f4; color: var(--ink-2, #4b5563); } .ds-tag-warn { background: var(--warn-soft, #fdf3e2); color: var(--warn-ink, #b45309); } .ds-tag-brand { background: var(--brand-soft, #e8f5ec); color: var(--brand-ink, #14532d); } .ds-state { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink, #111827); } .ds-state::before { content: \"\"; width: 7px; height: 7px; border-radius: 50%; background: var(--d, #6b7280); } .ds-crit { --d: #dc2626; } .ds-warn { --d: #d97706; } .ds-ok { --d: #16a34a; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The container for everything: hairline border, 12px radius, titled head, body, optional footer with a text link.",
+      "html": "<section class=\"ds-card\"><div class=\"ds-card-head\"><h3>Forecast accuracy</h3><p>One week ahead, 60 SKU-weeks</p></div><div class=\"ds-card-body\">12-week average <b>8.7%</b></div><div class=\"ds-card-foot\"><span>The festival uplift overstates October demand.</span><a href=\"#\">Details</a></div></section>",
+      "css": ".ds-card { background: var(--card, #ffffff); border: 1px solid var(--line, #e5e7eb); border-radius: 12px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04); font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; color: var(--ink, #111827); max-width: 360px; } .ds-card-head { padding: 16px 18px 0; } .ds-card-head h3 { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; margin: 0; } .ds-card-head p { font-size: 12.5px; color: var(--ink-3, #6b7280); margin: 2px 0 0; } .ds-card-body { padding: 14px 18px 18px; font-size: 13px; display: flex; justify-content: space-between; } .ds-card-body b { font-weight: 650; font-variant-numeric: tabular-nums; } .ds-card-foot { border-top: 1px solid var(--line-soft, #f0f1f3); padding: 11px 18px; font-size: 12.5px; color: var(--ink-3, #6b7280); display: flex; justify-content: space-between; gap: 10px; } .ds-card-foot a { color: var(--brand, #15803d); font-weight: 550; text-decoration: none; } .ds-card-foot a:hover { text-decoration: underline; } .ds-card-foot a:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; }"
+    },
+    {
+      "name": "KPI Card",
+      "kind": "card",
+      "refersTo": "kpi-card",
+      "description": "One figure per card in the KPI row: dot-led label, 28px tabular value, toned note.",
+      "html": "<div class=\"ds-kpi\"><span class=\"ds-kpi-label\"><i></i>Reorders</span><span class=\"ds-kpi-value\">5</span><span class=\"ds-kpi-note\">1,820 units recommended</span></div>",
+      "css": ".ds-kpi { width: 180px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; background: var(--card, #ffffff); border: 1px solid var(--line, #e5e7eb); border-radius: 12px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04); font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-kpi-label { font-size: 12.5px; font-weight: 500; color: var(--ink-3, #6b7280); display: flex; align-items: center; gap: 6px; } .ds-kpi-label i { width: 8px; height: 8px; border-radius: 50%; background: #dc2626; } .ds-kpi-value { font-size: 28px; line-height: 1.15; font-weight: 650; letter-spacing: -0.025em; color: var(--ink, #111827); font-variant-numeric: tabular-nums; } .ds-kpi-note { font-size: 12px; color: var(--ink-3, #6b7280); }"
+    },
+    {
+      "name": "Weeks-of-Cover Row",
+      "kind": "custom",
+      "refersTo": "cover-chart",
+      "description": "Signature chart row: SKU name, track with its own target-window band, state-coloured bar, tabular value. Bars grow from zero on scroll.",
+      "html": "<div class=\"ds-cover\"><div class=\"ds-cover-row\"><button class=\"ds-cover-name\"><b>011</b>Multigrain Bread 400g</button><div class=\"ds-cover-track\"><div class=\"ds-cover-zone\" style=\"left:12.5%;width:4.2%\"></div><div class=\"ds-cover-bar\" style=\"width:7.5%;background:#dc2626\"></div></div><div class=\"ds-cover-val\" style=\"color:#b91c1c\">1.8</div></div><div class=\"ds-cover-row\"><button class=\"ds-cover-name\"><b>009</b>Chia Seeds 200g</button><div class=\"ds-cover-track\"><div class=\"ds-cover-zone\" style=\"left:25%;width:33.3%\"></div><div class=\"ds-cover-bar\" style=\"width:39%;background:#334155\"></div></div><div class=\"ds-cover-val\">9.4</div></div></div>",
+      "css": ".ds-cover { width: 560px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-cover-row { display: grid; grid-template-columns: 170px 1fr 48px; align-items: center; gap: 12px; height: 28px; } .ds-cover-name { font: inherit; font-size: 12.5px; color: var(--ink-2, #4b5563); background: none; border: 0; padding: 0; text-align: left; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .ds-cover-name b { color: var(--ink, #111827); font-weight: 600; margin-right: 6px; font-variant-numeric: tabular-nums; } .ds-cover-name:hover { color: var(--brand, #15803d); } .ds-cover-name:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; border-radius: 6px; } .ds-cover-track { position: relative; height: 8px; background: var(--line-soft, #f0f1f3); border-radius: 8px; } .ds-cover-zone { position: absolute; top: -5px; bottom: -5px; background: rgba(22, 163, 74, 0.1); border-left: 1px dashed rgba(22, 163, 74, 0.6); border-right: 1px dashed rgba(22, 163, 74, 0.6); } .ds-cover-bar { position: absolute; left: 0; top: 0; height: 8px; border-radius: 8px; } .ds-cover-val { font-size: 12.5px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Evidence Desk",
+    "overview": "Freshroots Planner is a light operations dashboard for a demand planner and a procurement approver. A fixed white sidebar, a frosted sticky header and a 12-column grid of white cards on a cool grey canvas carry the whole product; the planner reads the KPI row, scans the charts, opens a SKU and decides. Density and clarity come first: 14px body text, 13px tables, tabular numerals everywhere a number sits in a column, and a quiet greyscale chrome that lets the few coloured marks mean something.\n\nColour is rationed. Freshroots green is the one action and brand colour; red, amber and green appear only as state, and data series use slate, teal, amber and mist. Depth is a hairline border plus a barely-there two-layer shadow; nothing floats except the drawer, the toast and the mobile sidebar.\n\nApple applies to the motion, not the look: Lenis inertial scroll driven by the GSAP ticker, cards that rise in with a short eased stagger, numbers that count up, lines that draw on and bars that grow from zero as they enter the viewport. Every effect is skipped under reduced motion and content is visible by default. The product rejects the marketing-page look (full-bleed black bands, oversized display headlines) as firmly as the grey admin template.",
+    "keyCharacteristics": [
+      "240px white sidebar with line icons, labels and pending counts; 60px frosted sticky header.",
+      "12-column card grid, 16px gaps, white cards with 1px borders and 12px corners.",
+      "One row of KPI cards opens every working page.",
+      "One green action colour; state colours only for meaning.",
+      "Inter Variable throughout, tabular numerals for every figure.",
+      "Motion is inertial, eased (expo-out) and once-only."
+    ],
+    "rules": [
+      { "name": "The One Green Rule", "body": "Freshroots Green is the only colour that fills an action. It never tells one data category from another: in-window data uses Slate, healthy states use Good Green dots and text, and the only chart it draws is the single overall sales line.", "section": "colors" },
+      { "name": "The Meaning-Only Rule", "body": "Red, amber and state green appear only when they report a condition the data supports; a dot, a tag tint, a bar or a value colour, never a fill behind chrome.", "section": "colors" },
+      { "name": "The Ink-Variant Rule", "body": "State text on white uses the -ink step (crit-ink, warn-ink, ok-ink); the bright step is for dots, bars and swatches.", "section": "colors" },
+      { "name": "The Tabular Rule", "body": "Every number that can sit above or beside another number sets `font-variant-numeric: tabular-nums`: KPIs, table cells, cover values, meters, figure tiles, definition values.", "section": "typography" },
+      { "name": "The Sentence-Case Rule", "body": "Labels, column heads, nav and buttons are sentence case at normal tracking. Hierarchy is weight and ink, not capitals.", "section": "typography" },
+      { "name": "The Hairline-First Rule", "body": "A card is a border first; its shadow must stay invisible at a glance. Only the drawer, the toast and the mobile sidebar cast a visible shadow.", "section": "elevation" },
+      { "name": "The Frosted Header Rule", "body": "Sticky bars (page header, drawer head) are canvas at 82 to 90% opacity with a 14px backdrop blur and a hairline bottom rule.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** open every working page with the header (title, crumb, role selector, primary action) and a KPI row before the card grid.",
+      "**Do** place content in white 12px-radius cards with 1px hairline borders on the 12-column, 16px-gap grid.",
+      "**Do** keep Freshroots Green (#15803d) for action fills, links, focus, the brand mark and the single overall sales line.",
+      "**Do** use red, amber and state green only to report a condition, with the -ink step for text on white.",
+      "**Do** set tabular numerals on every figure and right-align numeric table columns.",
+      "**Do** make every number or row that has evidence open it (the SKU drawer) with one click.",
+      "**Do** animate with the expo-out curve, once, on entry, and skip it all under reduced motion."
+    ],
+    "donts": [
+      "**Don't** bring back full-bleed black bands, oversized display headlines or any marketing-page section rhythm.",
+      "**Don't** fall back to a generic grey admin template: keep the white cards, hairlines and single green accent.",
+      "**Don't** use Freshroots Green to tell data categories apart or to fill a control that is not an action.",
+      "**Don't** add visible shadows to cards; elevation is for the drawer, toast and mobile sidebar.",
+      "**Don't** set labels, column heads or buttons in uppercase or wide tracking.",
+      "**Don't** add looping or scroll-jacked animation; motion plays once and content never waits on it."
+    ]
+  }
+}
