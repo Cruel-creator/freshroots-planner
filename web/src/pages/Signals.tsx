@@ -43,7 +43,6 @@ export function Signals() {
                   <tr key={p.Metric}>
                     <td className="primary">
                       <strong>{p.Metric}</strong>
-                      <span className="sub">{p.Basis}</span>
                     </td>
                     <td className="r" data-label="Latest">
                       {p.Latest}

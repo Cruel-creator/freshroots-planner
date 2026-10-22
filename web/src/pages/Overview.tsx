@@ -43,7 +43,6 @@ export function Overview() {
   const approved = recs.filter(r => r.status === 'Procurement approved' || r.status === 'Exported as draft').length
   const firstOut = reorders.map(r => runOut(r, m.analysis_date)).filter((d): d is Date => !!d).sort((a, b) => a.getTime() - b.getTime())[0]
   const stockDay = shortDate(new Date(`${m.analysis_date}T00:00:00`))
-  const week = Number(m.anchor_week.split('-W')[1])
   const word = numberWord(reorders.length).toLowerCase()
 
   // Demand: the last four weeks against the twelve before them.
@@ -107,9 +106,6 @@ export function Overview() {
             )}
             Nothing is ordered until Raghav and procurement sign each line.
           </p>
-          <div className="byline num">
-            {m.rule_version.replace('rules-', 'Rules ')} · {recs.length} products · sales through week {week}
-          </div>
         </div>
 
         <aside className="docket" aria-label="On Raghav's desk">
@@ -153,10 +149,7 @@ export function Overview() {
           </div>
           <blockquote>
             {quoteFor(ex, state, exRec)}
-            <cite>
-              {ex.category} · {ex.source_data}
-              {exRec?.recommended_qty ? ` · the rules suggest ${fmt(exRec.recommended_qty)} units` : ''}
-            </cite>
+            {exRec?.recommended_qty ? <cite>The rules suggest {fmt(exRec.recommended_qty)} units.</cite> : null}
           </blockquote>
           <aside>
             <b>Why a person decides</b>

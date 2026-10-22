@@ -146,7 +146,7 @@ export function SkuDrawer() {
                 </div>
               </details>
               <details className="disclose">
-                <summary>Source rows · weekly_sales.csv</summary>
+                <summary>Week-by-week sales</summary>
                 <div className="table-scroll">
                   <table className="data">
                     <thead>

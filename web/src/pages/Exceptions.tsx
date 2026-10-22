@@ -86,8 +86,6 @@ export function Exceptions() {
                   <dl className="kv span-6">
                     <dt>Signal</dt>
                     <dd>{e.signal}</dd>
-                    <dt>Source</dt>
-                    <dd>{e.source_data}</dd>
                     <dt>Rules</dt>
                     <dd>{label(e.rules_triggered)}</dd>
                   </dl>

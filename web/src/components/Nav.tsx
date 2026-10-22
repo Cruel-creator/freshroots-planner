@@ -95,13 +95,9 @@ export function Page({ kicker, title, crumb, action, head = true, children }: { 
 }
 
 export function Colophon() {
-  const { state } = useApp()
   return (
     <footer className="colophon">
       <i>Suggestions come from Raghav's documented rules; decisions are his and procurement's.</i>
-      <span className="num">
-        {state.meta.rule_version.replace('rules-', 'Rules ')} · run {state.meta.run.run_id.replace('RUN-', '')} · draft only, nothing leaves this app
-      </span>
     </footer>
   )
 }
