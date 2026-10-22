@@ -59,7 +59,8 @@ class Config:
 
 def database_target(cfg: Config) -> str:
     """Neon/Postgres URL when DATABASE_URL is set, otherwise the SQLite file."""
-    return os.environ.get("DATABASE_URL", "").strip() or str(cfg.db_path)
+    # Strip a stray byte-order mark too: Windows PowerShell adds one when piping a value into `vercel env add`.
+    return os.environ.get("DATABASE_URL", "").strip().lstrip("﻿") or str(cfg.db_path)
 
 
 def load_config() -> Config:
