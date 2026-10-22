@@ -7,7 +7,11 @@ export function Plan() {
   const span = 90
 
   return (
-    <Page title="Plan" crumb="What the rollout could be worth, how it runs, and what Freshroots still has to confirm.">
+    <Page
+      kicker="Plan"
+      title="Ninety days from rules to a pilot."
+      crumb="What the rollout could be worth, how it runs, and what Freshroots still has to confirm. Scenarios only; nothing here has been measured."
+    >
       <div className="kpis" style={{ ['--n' as string]: 3 }}>
         <Kpi label="Reported losses" value="₹28–34L" note="per quarter, from the case" />
         <Kpi label="Budget" value="₹15L" note="treated as a one-time cost" />
@@ -49,7 +53,7 @@ export function Plan() {
             {R.plan.map(p => (
               <div className="timeline-row" key={p.Phase}>
                 <div>
-                  <div style={{ fontWeight: 600 }}>{p.Phase}</div>
+                  <div className="phase">{p.Phase}</div>
                   <div className="fine">
                     Days {p['Start day']}–{p['End day']}
                   </div>

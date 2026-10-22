@@ -49,22 +49,19 @@ export function Planning() {
 
   return (
     <Page
-      title="Planning"
-      crumb="Every SKU with its rule output. Demand is per SKU across all distributors."
+      kicker="Products"
+      title="Every product, and what the rules suggest."
+      crumb="Sales are per product across all distributors. Select a row for its chart, formulas, source rows and the decision."
       action={
         <a className="btn btn-secondary" href={`/api/runs/${encodeURIComponent(runId)}/recommendations.csv`}>
           <Download size={15} /> Export CSV
         </a>
       }
     >
-      <Card
-        title={`${rows.length} of ${state.recommendations.length} SKUs`}
-        sub="Select a row for its chart, formulas, source rows and decision controls."
-        bodyClass="flush"
-      >
-        <div className="toolbar" style={{ padding: '0 18px' }}>
+      <Card title={`${rows.length} of ${state.recommendations.length} products`} sub="Sorted by weeks of stock left, least first. Select a column heading to sort by it." bodyClass="flush">
+        <div className="toolbar">
           <div className="toolbar-left">
-            <input className="search" type="search" placeholder="Search SKU or product" aria-label="Search SKU or product" value={q} onChange={e => setQ(e.target.value)} />
+            <input className="search" type="search" placeholder="Search products" aria-label="Search products" value={q} onChange={e => setQ(e.target.value)} />
             <div className="seg" role="group" aria-label="Filter">
               {FILTERS.map(f => (
                 <button key={f} aria-pressed={filter === f} onClick={() => setFilter(f)}>
@@ -92,7 +89,7 @@ export function Planning() {
           <table className="data stack">
             <thead>
               <tr>
-                <H k="sku_id">SKU</H>
+                <H k="sku_id">Product</H>
                 <H k="recent_4w_avg" right>
                   4-wk avg
                 </H>
@@ -103,17 +100,17 @@ export function Planning() {
                   Change
                 </H>
                 <H k="adjusted_weekly_demand" right>
-                  Adj. demand
+                  Expected / wk
                 </H>
                 <H k="current_stock" right>
                   Stock
                 </H>
                 <H k="weeks_of_cover" right>
-                  Cover (wks)
+                  Weeks left
                 </H>
-                <th>Recommendation</th>
+                <th>Suggested</th>
                 <H k="recommended_qty" right>
-                  Qty
+                  Units
                 </H>
                 <th>Status</th>
               </tr>
@@ -130,18 +127,18 @@ export function Planning() {
                   </td>
                   <td className="r hide-sm">{fmt(r.recent_4w_avg, 1)}</td>
                   <td className="r hide-sm">{fmt(r.baseline_12w_avg, 1)}</td>
-                  <td className="r hide-sm" style={{ color: (r.demand_change_pct ?? 0) > state.meta.thresholds.high_demand ? 'var(--warn-ink)' : undefined }}>
+                  <td className="r hide-sm" style={{ color: (r.demand_change_pct ?? 0) > state.meta.thresholds.high_demand ? 'var(--ochre)' : undefined }}>
                     {pct(r.demand_change_pct)}
                   </td>
                   <td className="r hide-sm">{fmt(r.adjusted_weekly_demand, 1)}</td>
                   <td className="r hide-sm">{fmt(r.current_stock)}</td>
-                  <td className="r" data-label="Weeks of cover">
+                  <td className="r" data-label="Weeks left">
                     <strong>{r.cover_is_infinite ? '∞' : fmt(r.weeks_of_cover, 1)}</strong>
                   </td>
-                  <td data-label="Recommendation">
+                  <td data-label="Suggested">
                     <span className={`state ${recState(r)}`}>{r.action}</span>
                   </td>
-                  <td className="r" data-label="Qty">
+                  <td className="r" data-label="Units">
                     {r.recommended_qty === null ? '—' : r.recommended_qty ? fmt(r.recommended_qty) : '—'}
                   </td>
                   <td data-label="Status">
@@ -152,7 +149,7 @@ export function Planning() {
               {!rows.length && (
                 <tr>
                   <td colSpan={10} className="empty">
-                    No SKUs match these filters.
+                    No products match these filters.
                   </td>
                 </tr>
               )}

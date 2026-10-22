@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Download } from 'lucide-react'
 import { useApp } from '../ctx'
 import { Card, Kpi, Page } from '../components/Nav'
-import { fmt } from '../format'
+import { fmt, numberWord } from '../format'
 
 const SEV = ['error', 'warning', 'info'] as const
 
@@ -17,8 +17,9 @@ export function Data() {
 
   return (
     <Page
-      title="Data"
-      crumb="All five files are read as text and checked before any rule runs. Nothing is dropped silently."
+      kicker="Data"
+      title={`${numberWord(files.length)} files, checked before any rule runs.`}
+      crumb="Every file is read as text and validated first. Nothing is dropped silently, and what the data cannot show is stated, never guessed."
       action={
         <a className="btn btn-secondary" href="/api/validation.csv">
           <Download size={15} /> Findings CSV
@@ -42,7 +43,7 @@ export function Data() {
                   <th>Status</th>
                   <th className="r">Rows</th>
                   <th className="r">Excluded</th>
-                  <th className="r">SKUs</th>
+                  <th className="r">Products</th>
                   <th className="r">Distributors</th>
                   <th>Range</th>
                 </tr>
@@ -157,7 +158,7 @@ export function Data() {
               <span className="tag">Not in data</span>
             </li>
             <li>
-              <span>Scale: 15 SKUs, 16 weeks</span>
+              <span>Scale: 15 products, 16 weeks</span>
               <span className="tag warn">Sample</span>
             </li>
           </ul>
@@ -166,7 +167,7 @@ export function Data() {
 
       <div className="grid">
         <Card className="span-12" title={`Data dictionary · ${q.dictionary.length} columns`} bodyClass="flush">
-          <details className="disclose" style={{ padding: '10px 18px' }}>
+          <details className="disclose">
             <summary>Show columns</summary>
             <div className="table-scroll">
               <table className="data stack">

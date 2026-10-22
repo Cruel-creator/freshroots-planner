@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AppProvider } from './ctx'
-import { useCardEntrance, useScrollRefresh, useSmoothScroll, scrollToTop } from './motion'
+import { scrollToTop } from './motion'
 import { ROUTES, Shell } from './components/Nav'
 import { SkuDrawer } from './components/Drawer'
 import { Overview } from './pages/Overview'
@@ -29,21 +29,8 @@ const readRoute = () => {
   return r in PAGES ? r : ''
 }
 
-function Routed({ route }: { route: string }) {
-  const Page = PAGES[route]
-  useCardEntrance(route)
-  return (
-    <Shell route={route}>
-      <Page key={route} />
-      <SkuDrawer />
-    </Shell>
-  )
-}
-
 export default function App() {
   const [route, setRoute] = useState(readRoute)
-  useSmoothScroll()
-  useScrollRefresh()
 
   useEffect(() => {
     const onHash = () => setRoute(readRoute())
@@ -53,26 +40,32 @@ export default function App() {
 
   useEffect(() => {
     scrollToTop()
-    const label = ROUTES.find(r => r.path === route)?.label ?? 'Overview'
-    document.title = route ? `${label} · Freshroots Planner` : 'Freshroots Planner'
+    const label = ROUTES.find(r => r.path === route)?.label ?? 'The brief'
+    document.title = route ? `${label} · Freshroots Planning Brief` : 'Freshroots Planning Brief'
   }, [route])
 
+  const Page = PAGES[route]
   return (
     <AppProvider>
       {(ready, error) =>
         ready ? (
-          <Routed route={route} />
+          <Shell route={route}>
+            <Page key={route} />
+            <SkuDrawer />
+          </Shell>
         ) : (
           <div className="loading">
             <div>
               {!error && <div className="pulse" aria-hidden="true" />}
               {error ? (
                 <>
-                  <p style={{ color: 'var(--ink)', fontSize: 16, fontWeight: 600, margin: '0 auto 6px' }}>The planner could not reach its data.</p>
-                  <p style={{ margin: '0 auto' }}>{error}. Start the API with python serve.py, then reload.</p>
+                  <p style={{ color: 'var(--ink)', margin: '0 auto 6px' }}>The brief could not reach its data.</p>
+                  <p className="fine" style={{ margin: '0 auto', fontStyle: 'normal' }}>
+                    {error}. Start the API with python serve.py, then reload.
+                  </p>
                 </>
               ) : (
-                'Loading the latest run'
+                'Setting this week’s brief'
               )}
             </div>
           </div>

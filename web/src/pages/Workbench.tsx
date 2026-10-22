@@ -3,6 +3,7 @@ import { Download } from 'lucide-react'
 import { api, downloadText } from '../api'
 import { useApp } from '../ctx'
 import { Card, Kpi, Page } from '../components/Nav'
+import { PALETTE } from '../components/Charts'
 import { fmt, statusState } from '../format'
 
 export function Workbench() {
@@ -45,18 +46,23 @@ export function Workbench() {
     ) : null
 
   return (
-    <Page title="Workbench" crumb="Raghav signs off every line; procurement approves every purchase-order line. Nothing is submitted from here." action={primary}>
+    <Page
+      kicker="Approvals"
+      title="Raghav signs first. Procurement signs second."
+      crumb="Every line needs Raghav's sign-off, and every order line needs procurement's. The draft PO is a file; nothing is submitted from here."
+      action={primary}
+    >
       <div className="kpis" style={{ ['--n' as string]: 5 }}>
-        <Kpi label="With Raghav" value={count('Pending planner review')} dot="#d97706" />
+        <Kpi label="With Raghav" value={count('Pending planner review')} dot={PALETTE.ochre} />
         <Kpi label="Signed off, no order" value={count('Planner approved') + count('Planner overridden')} />
-        <Kpi label="With procurement" value={count('Pending procurement approval')} dot="#d97706" />
-        <Kpi label="Approved to order" value={ready} dot="#16a34a" />
+        <Kpi label="With procurement" value={count('Pending procurement approval')} dot={PALETTE.ochre} />
+        <Kpi label="Approved to order" value={ready} dot={PALETTE.moss} />
         <Kpi label="Exported as draft" value={count('Exported as draft')} />
       </div>
 
       <Card
         title="Lines in this run"
-        sub={state.meta.inputs_changed ? 'Source files changed since this run. Start a new run to use the current data.' : `${recs.length} SKUs`}
+        sub={state.meta.inputs_changed ? 'Source files changed since this run. Start a new run to use the current data.' : `${recs.length} products in this run`}
         right={
           <div className="toolbar-right">
             <select className="select" style={{ width: 'auto', maxWidth: 300 }} value={runId} onChange={e => setRunId(e.target.value)} aria-label="Recommendation run">
@@ -124,7 +130,7 @@ export function Workbench() {
                     <span className={`state ${statusState(r.status)}`}>{r.status}</span>
                   </td>
                   <td className="r action">
-                    <button className={`btn btn-small ${r.status.startsWith('Pending') ? 'btn-primary' : 'btn-secondary'}`} onClick={() => openSku(r.sku_id)}>
+                    <button className="btn btn-small btn-secondary" onClick={() => openSku(r.sku_id)}>
                       {r.status.startsWith('Pending') ? 'Decide' : 'View'}
                     </button>
                   </td>
@@ -193,7 +199,7 @@ export function Workbench() {
           }
           bodyClass="flush"
         >
-          <details className="disclose" style={{ padding: '10px 18px' }}>
+          <details className="disclose">
             <summary>Show events</summary>
             <div className="table-scroll">
               <table className="data stack">

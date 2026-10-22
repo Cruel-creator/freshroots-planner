@@ -1,6 +1,6 @@
 import { useApp } from '../ctx'
 import { Card, Kpi, Page } from '../components/Nav'
-import { SignalStrip } from '../components/Charts'
+import { PALETTE, SignalStrip } from '../components/Charts'
 import { Triage } from '../components/Decide'
 import { pct } from '../format'
 
@@ -14,9 +14,13 @@ export function Signals() {
   const t = state.meta.thresholds
 
   return (
-    <Page title="Signals" crumb="Weekly sales movements routed to Priya, then acknowledged by procurement before any order for that SKU.">
+    <Page
+      kicker="Sales alerts"
+      title={open.length ? `${open.length === 1 ? 'One sales alert is' : `${open.length} sales alerts are`} holding orders.` : 'No unusual sales this week.'}
+      crumb="Sharp weekly moves go to Priya first. Procurement must acknowledge an open alert before any order for that product can be approved."
+    >
       <div className="kpis" style={{ ['--n' as string]: 4 }}>
-        <Kpi label={`Open in ${state.meta.anchor_week}`} value={open.length} tone={open.length ? 'warn' : 'good'} note={open.length ? 'Orders for these SKUs are held' : 'No order line is held'} />
+        <Kpi label={`Open in ${state.meta.anchor_week}`} value={open.length} tone={open.length ? 'warn' : 'good'} note={open.length ? 'Orders for these products are held' : 'No order line is held'} />
         <Kpi label="Detected in history" value={hist.length} note={skus.join(', ') || 'None'} />
         <Kpi label="Drop threshold" value={`${Math.round(t.signal_drop * 100)}%`} note="vs previous 4 weeks or week on week" />
         <Kpi label="Spike threshold" value={`${Math.round(t.signal_spike * 100)}%`} note="Proposed, to agree with Priya" />
@@ -76,7 +80,7 @@ export function Signals() {
       {sig.length > 0 && (
         <div className="grid">
           {sig.map(s => (
-            <Card key={s.sid} className="span-6" title={`${s.sku_id} · ${s.signal_type.replaceAll('_', ' ').toLowerCase()}`} sub={`${s.week} · ${s.severity}`} right={<span className="kpi-value" style={{ fontSize: 20 }}>{pct(s.change_pct)}</span>}>
+            <Card key={s.sid} className="span-6" title={`${s.sku_id} · ${s.signal_type.replaceAll('_', ' ').toLowerCase()}`} sub={`${s.week} · ${s.severity}`} right={<span className="kpi-value" style={{ fontSize: 24 }}>{pct(s.change_pct)}</span>}>
               <p className="small muted">{s.message}</p>
               <Triage signal={s} />
             </Card>
@@ -85,24 +89,24 @@ export function Signals() {
       )}
 
       <div className="grid">
-        <Card className="span-12" title="Every week, scanned" sub="Signals the monitor would have raised in earlier weeks. Only the latest week is routed for action.">
-          {hist.length ? <SignalStrip weeks={weeks} signals={hist} skus={skus} /> : <p className="empty">No signals in the history at these thresholds.</p>}
+        <Card className="span-12" title="Every week, scanned" sub="Alerts the monitor would have raised in earlier weeks. Only the latest week is routed for action.">
+          {hist.length ? <SignalStrip weeks={weeks} signals={hist} skus={skus} /> : <p className="empty">No alerts in the history at these thresholds.</p>}
           <div className="legend">
             <span>
-              <i style={{ background: '#dc2626' }} />
-              Drop vs trend
+              <i className="box" style={{ background: PALETTE.brick }} />
+              Drop against the trend
             </span>
             <span>
-              <i style={{ background: '#d97706' }} />
+              <i className="box" style={{ background: PALETTE.ochre }} />
               Week-on-week drop
             </span>
             <span>
-              <i style={{ background: '#334155' }} />
-              Spike vs trend
+              <i className="box" style={{ background: PALETTE.ink2 }} />
+              Spike against the trend
             </span>
           </div>
           {hist.length > 0 && (
-            <ul className="list" style={{ marginTop: 10 }}>
+            <ul className="list" style={{ marginTop: 14 }}>
               {hist.map(h => (
                 <li key={h.signal_id}>
                   <span>

@@ -1,117 +1,115 @@
-// Dashboard shell: sidebar navigation, sticky page header, page content.
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
-import { Activity, AlertTriangle, CalendarRange, ClipboardCheck, Database, LayoutDashboard, LineChart, Menu, Sprout, Table2 } from 'lucide-react'
+// The Planning Brief shell: a masthead, a sticky section bar, and editorial building blocks
+// (page head, ruled sections, figure strips) that every page is set in.
+import type { ReactNode } from 'react'
 import { useApp } from '../ctx'
-import { lockScroll } from '../motion'
+import { dateLong } from '../format'
 
 export const ROUTES = [
-  { path: '', label: 'Overview', icon: LayoutDashboard },
-  { path: 'planning', label: 'Planning', icon: Table2 },
-  { path: 'exceptions', label: 'Exceptions', icon: AlertTriangle },
-  { path: 'workbench', label: 'Workbench', icon: ClipboardCheck },
-  { path: 'signals', label: 'Signals', icon: Activity },
-  { path: 'backtest', label: 'Backtest', icon: LineChart },
-  { path: 'data', label: 'Data', icon: Database },
-  { path: 'plan', label: 'Plan', icon: CalendarRange },
+  { path: '', label: 'The brief' },
+  { path: 'planning', label: 'Products' },
+  { path: 'exceptions', label: 'Exceptions' },
+  { path: 'workbench', label: 'Approvals' },
+  { path: 'signals', label: 'Sales alerts' },
+  { path: 'backtest', label: 'Forecast' },
+  { path: 'data', label: 'Data' },
+  { path: 'plan', label: 'Plan' },
 ]
 
-const MenuCtx = createContext<{ open: boolean; setOpen: (v: boolean) => void }>({ open: false, setOpen: () => undefined })
+function Reader({ className }: { className: string }) {
+  const { state, actor, setActor } = useApp()
+  return (
+    <label className={`reader ${className}`}>
+      Reading as
+      <select value={actor.name} onChange={e => setActor(e.target.value)} aria-label="Reading as">
+        {state.meta.actors.map(a => (
+          <option key={a.name} value={a.name}>
+            {a.name}, {a.role}
+          </option>
+        ))}
+      </select>
+    </label>
+  )
+}
 
 export function Shell({ route, children }: { route: string; children: ReactNode }) {
-  const [open, setOpen] = useState(false)
-  useEffect(() => setOpen(false), [route])
-  useEffect(() => {
-    lockScroll(open)
-    return () => lockScroll(false)
-  }, [open])
-  return (
-    <MenuCtx.Provider value={{ open, setOpen }}>
-      <div className="app">
-        <Sidebar route={route} open={open} />
-        {open && <div className="scrim open" style={{ zIndex: 29 }} onClick={() => setOpen(false)} aria-hidden="true" />}
-        <div className="main">{children}</div>
-      </div>
-    </MenuCtx.Provider>
-  )
-}
-
-function Sidebar({ route, open }: { route: string; open: boolean }) {
   const { state } = useApp()
+  const m = state.meta
+  const recs = state.recommendations
   const counts: Record<string, number> = {
-    exceptions: state.recommendations.filter(r => (r.needs_review || r.action === state.meta.review_action) && r.status === 'Pending planner review').length,
-    workbench: state.recommendations.filter(r => r.status === 'Pending planner review' || r.status === 'Pending procurement approval').length,
+    planning: recs.length,
+    exceptions: recs.filter(r => (r.needs_review || r.action === m.review_action) && r.status === 'Pending planner review').length,
+    workbench: recs.filter(r => r.status === 'Pending planner review' || r.status === 'Pending procurement approval').length,
     signals: state.signals.filter(s => s.status === 'New' || s.status === 'Surfaced to procurement').length,
   }
-  return (
-    <aside className={`sidebar ${open ? 'open' : ''}`} aria-label="Main navigation">
-      <a className="brand" href="#/">
-        <span className="brand-mark">
-          <Sprout size={16} />
-        </span>
-        <span>
-          Freshroots
-          <small>Demand planning</small>
-        </span>
-      </a>
-      <nav>
-        {ROUTES.map(r => {
-          const Icon = r.icon
-          return (
-            <a key={r.path} className="nav-item" href={`#/${r.path}`} aria-current={route === r.path ? 'page' : undefined}>
-              <Icon size={17} strokeWidth={1.8} />
-              {r.label}
-              {counts[r.path] ? <span className="nav-count">{counts[r.path]}</span> : null}
-            </a>
-          )
-        })}
-      </nav>
-      <div className="sidebar-foot">
-        <b>Run</b> {state.meta.run.run_id.slice(4, 19)}
-        <br />
-        <b>Stock as of</b> {state.meta.analysis_date}
-        <br />
-        <b>Rules</b> {state.meta.rule_version.replace('rules-', '')}
-        <br />
-        <span>No purchase order leaves this app.</span>
-      </div>
-    </aside>
-  )
-}
-
-export function Page({ title, crumb, action, children }: { title: string; crumb?: string; action?: ReactNode; children: ReactNode }) {
-  const { state, actor, setActor } = useApp()
-  const { setOpen } = useContext(MenuCtx)
+  const issue = Number(m.anchor_week.split('-W')[1]) || ''
   return (
     <>
-      <header className="header">
-        <button className="icon-btn menu-btn" aria-label="Open navigation" onClick={() => setOpen(true)}>
-          <Menu size={18} />
-        </button>
-        <h1>{title}</h1>
-        {crumb && <span className="crumb">{crumb}</span>}
-        <div className="header-right">
-          <label className="actor">
-            <span>Acting as</span>
-            <select value={actor.name} onChange={e => setActor(e.target.value)} aria-label="Acting as">
-              {state.meta.actors.map(a => (
-                <option key={a.name} value={a.name}>
-                  {a.name} · {a.role}
-                </option>
-              ))}
-            </select>
-          </label>
-          {action}
+      <header className="mast wrap">
+        <div className="mast-row">
+          <a className="wordmark" href="#/">
+            Freshroots <i>Planning Brief</i>
+          </a>
+          <span className="issue num">
+            No. {issue} · {dateLong(m.analysis_date)}
+          </span>
         </div>
+        <Reader className="reader-m" />
+        <div className="mast-rule" />
       </header>
-      <main className="content page-enter">{children}</main>
+      <div className="sections-bar">
+        <div className="sections wrap">
+          <nav aria-label="Sections">
+            {ROUTES.map(r => (
+              <a key={r.path} href={`#/${r.path}`} aria-current={route === r.path ? 'page' : undefined}>
+                {r.label}
+                {counts[r.path] ? <em className="num">{counts[r.path]}</em> : null}
+              </a>
+            ))}
+          </nav>
+          <Reader className="reader-d" />
+        </div>
+      </div>
+      <div className="wrap">{children}</div>
     </>
   )
 }
 
-/** Card with a head (title, optional subtitle and right-side slot) and body. */
-export function Card({ title, sub, right, foot, className = '', bodyClass = '', children }: { title?: string; sub?: ReactNode; right?: ReactNode; foot?: ReactNode; className?: string; bodyClass?: string; children: ReactNode }) {
+/** Inner pages: a kicker, a headline that states the finding, a lede, and at most one or two actions. */
+export function Page({ kicker, title, crumb, action, head = true, children }: { kicker?: string; title: ReactNode; crumb?: ReactNode; action?: ReactNode; head?: boolean; children: ReactNode }) {
   return (
-    <section className={`card reveal-card ${className}`}>
+    <main className="content">
+      {head && (
+        <header className="phead">
+          <div>
+            {kicker && <div className="sc">{kicker}</div>}
+            <h1>{title}</h1>
+            {crumb && <p className="lede">{crumb}</p>}
+          </div>
+          {action && <div className="phead-act">{action}</div>}
+        </header>
+      )}
+      {children}
+      <Colophon />
+    </main>
+  )
+}
+
+export function Colophon() {
+  const { state } = useApp()
+  return (
+    <footer className="colophon">
+      <i>Suggestions come from Raghav's documented rules; decisions are his and procurement's.</i>
+      <span className="num">
+        {state.meta.rule_version.replace('rules-', 'Rules ')} · run {state.meta.run.run_id.replace('RUN-', '')} · draft only, nothing leaves this app
+      </span>
+    </footer>
+  )
+}
+
+/** A ruled section: serif title over a hairline, no box. */
+export function Card({ title, sub, right, foot, className = '', bodyClass = '', children }: { title?: ReactNode; sub?: ReactNode; right?: ReactNode; foot?: ReactNode; className?: string; bodyClass?: string; children: ReactNode }) {
+  return (
+    <section className={`card ${className}`}>
       {(title || right) && (
         <div className="card-head">
           <div>
@@ -127,9 +125,10 @@ export function Card({ title, sub, right, foot, className = '', bodyClass = '', 
   )
 }
 
+/** One figure in a ruled strip: the number first, then what it counts. */
 export function Kpi({ label, value, note, tone, dot }: { label: string; value: ReactNode; note?: ReactNode; tone?: 'up' | 'good' | 'warn'; dot?: string }) {
   return (
-    <div className="card kpi reveal-card">
+    <div className="kpi">
       <span className="kpi-label">
         {dot && <span className="kpi-dot" style={{ ['--dot' as string]: dot }} />}
         {label}

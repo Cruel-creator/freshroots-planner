@@ -31,7 +31,13 @@ C:\venvs\freshroots\Scripts\python.exe serve.py
 
 Open http://localhost:8000. This serves the web UI (React, built into `web/dist` by the step above) and its JSON API. If you're on macOS or Linux, use `python -m venv .venv` and `.venv/bin/python` instead.
 
-The web UI is a light operations dashboard: a sidebar, a sticky header with the role selector, a KPI row and a card grid of charts and tables. The motion is smooth: Lenis inertial scrolling on GSAP's ticker, staggered card entrances, CountUp numerals (React Bits), charts that draw on, and a weeks-of-cover chart whose bars grow as it scrolls into view. The overview's welcome strip sits on an interactive React Bits DotGrid. Motion switches off under `prefers-reduced-motion`.
+The web UI is **The Planning Brief**, set like a weekly bulletin rather than a dashboard:
+- **Front page:** a masthead and a headline that states the week's call ("Reorder five products. The first runs out on 31 October.").
+- **Evidence:** the exception that needs a person, as a pull-quote.
+- **The runway:** a calendar of the date each product runs out, against where it should run out.
+- **Inner pages:** each opens with a headline that states its finding, then ruled sections instead of cards.
+
+Type is Newsreader (editorial serif) with Instrument Sans. One colour acts (moss); brick means running short and ochre means overstocked, always with words. Motion is minimal: native scrolling, a short fade when a page settles, and the drawer sliding in. It switches off under `prefers-reduced-motion`.
 
 To change the UI, rebuild it with Node 20 or later:
 
@@ -86,12 +92,12 @@ Without `DATABASE_URL`, delete `data/freshroots.db` to reset all approvals.
 
 | Page (web UI) | What it does |
 |---|---|
-| Overview | Hero with today's decisions as counted figures, the scroll-scrubbed "weeks of cover" runway for every SKU, 16 weeks of sales, today's decision list, the backtest verdict, signal status |
-| Planning | Searchable, sortable SKU table with filters; selecting a row opens the SKU drawer (chart, explanation, formulas, source rows, decision controls) |
-| Exceptions | Raghav's queue: the signal, its source data, the rules triggered, why automation isn't enough, the next action, and approve / override / reject |
-| Workbench | Pipeline counts, planner and procurement approvals, human checkpoints for each line, run selector, recommendations CSV, draft PO export, audit log |
-| Signals | Option C: weekly pulse, which of the 12 report metrics the data covers, signal triage (Priya), acknowledgement (procurement), signal history |
-| Backtest | Leakage-free chronological backtest at 1–4 weeks ahead: WAPE and MAE against an explicit baseline, by week and by SKU |
+| The brief | The week's call as a front page, Raghav's desk (reorder / pause / needs judgment), the exception as a pull-quote, the runway of run-out dates, demand, and whether the forecast can be trusted |
+| Products | Searchable, sortable product table with filters; selecting a row opens the product drawer (chart, explanation, formulas, source rows, decision controls) |
+| Exceptions | Raghav's queue: the signal, its source data, the rules triggered, why automation isn't enough, the next action, an optional Gemini note, and approve / override / reject |
+| Approvals | Pipeline counts, planner and procurement approvals, human checkpoints for each line, run selector, recommendations CSV, draft PO export, audit log |
+| Sales alerts | Option C: weekly pulse, which of the 12 report metrics the data covers, alert triage (Priya), acknowledgement (procurement), alert history |
+| Forecast | Leakage-free chronological backtest at 1–4 weeks ahead: WAPE and MAE against an explicit baseline, by week and by product |
 | Data | File status, findings with CSV line numbers, what the data cannot show, data dictionary, file fingerprints |
 | Plan | ROI scenarios, the 90-day plan, open business questions |
 

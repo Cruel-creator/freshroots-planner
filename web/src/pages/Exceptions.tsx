@@ -4,7 +4,7 @@ import { api } from '../api'
 import { useApp } from '../ctx'
 import { Card, Kpi, Page } from '../components/Nav'
 import { Decide } from '../components/Decide'
-import { cover, fmt, statusState } from '../format'
+import { cover, fmt, numberWord, statusState } from '../format'
 
 type AiNote = { note: string; category: string }
 
@@ -45,19 +45,23 @@ export function Exceptions() {
       .join(' · ') || 'No rule flags'
 
   return (
-    <Page title="Exceptions" crumb="The cases the rules cannot settle alone. Each one gets a person, never an automatic quantity.">
+    <Page
+      kicker="Exceptions"
+      title={review.length ? `${review.length === 1 ? 'One case' : `${numberWord(review.length)} cases`} the rules can't settle alone.` : 'The rules settle every line this week.'}
+      crumb="Each one goes to Raghav with its evidence. A person decides; the rules never set the quantity on their own."
+    >
       <div className="kpis" style={{ ['--n' as string]: 3 }}>
-        <Kpi label="SKUs needing Raghav" value={review.length} />
+        <Kpi label="Products needing Raghav" value={review.length} />
         <Kpi label="Still pending" value={pending} tone={pending ? 'warn' : 'good'} note={pending ? 'Awaiting a decision' : 'All decided'} />
         <Kpi label="Rule conflicts" value={conflicts} note={`${state.exceptions.length} exception${state.exceptions.length === 1 ? '' : 's'} in total`} />
       </div>
 
       {!review.length && (
         <Card title="Nothing needs Raghav">
-          <p className="muted">No exceptions in this run.</p>
+          <p className="empty">No exceptions in this run.</p>
         </Card>
       )}
-      <div style={{ display: 'grid', gap: 16 }}>
+      <div style={{ display: 'grid', gap: 40 }}>
         {review.map(r => {
           const ex = state.exceptions.filter(e => e.sku_id === r.sku_id)
           return (
@@ -78,7 +82,7 @@ export function Exceptions() {
               }
             >
               {ex.map(e => (
-                <div key={e.code} className="grid" style={{ marginBottom: 14 }}>
+                <div key={e.code} className="grid" style={{ marginBottom: 18, rowGap: 14 }}>
                   <dl className="kv span-6">
                     <dt>Signal</dt>
                     <dd>{e.signal}</dd>
@@ -114,7 +118,7 @@ export function Exceptions() {
           )
         })}
       </div>
-      <p className="fine" style={{ marginTop: 16 }}>
+      <p className="fine" style={{ marginTop: 24 }}>
         Exceptions come from deterministic checks (modified z-score, 20% demand drop) and rule conflicts. They never change a calculation.{' '}
         {aiOn
           ? 'AI notes are written by Gemini from the facts shown here only. They suggest what to check; they never set a quantity, an action or a status.'

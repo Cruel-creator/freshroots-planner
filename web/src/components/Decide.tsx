@@ -17,7 +17,7 @@ export function Decide({ rec, compact = false }: { rec: Rec; compact?: boolean }
 
   if (rec.status === 'Pending planner review') {
     if (actor.role !== 'planner')
-      return <p className="hint">Waiting for Raghav (planner). Switch “Acting as” to decide.</p>
+      return <p className="hint">Waiting for Raghav (planner). Switch “Reading as” to decide.</p>
     const blocked = rec.action === state.meta.review_action
       ? 'The rules give no single answer here. Override with an action, quantity and reason.'
       : state.meta.reorder_actions.includes(rec.action) && !rec.recommended_qty
@@ -94,12 +94,12 @@ export function Decide({ rec, compact = false }: { rec: Rec; compact?: boolean }
     if (actor.role !== 'procurement')
       return (
         <p className="hint">
-          Waiting for procurement to approve {fmt(rec.final_qty)} units.{open.length ? ' An operations signal is still open for this SKU.' : ''}
+          Waiting for procurement to approve {fmt(rec.final_qty)} units.{open.length ? ' A sales alert is still open for this product.' : ''}
         </p>
       )
     return (
       <div className="stack-gap">
-        {open.length > 0 && <p className="hint" style={{ color: 'var(--orange-ink)' }}>Blocked: {open.length} open operations signal(s). Priya must triage and you must acknowledge them on Signals.</p>}
+        {open.length > 0 && <p className="hint" style={{ color: 'var(--ochre)' }}>Held: {open.length} open sales alert{open.length === 1 ? '' : 's'}. Priya must triage and you must acknowledge {open.length === 1 ? 'it' : 'them'} on Sales alerts.</p>}
         <div className="toolbar-left">
           <button className="btn btn-primary" disabled={open.length > 0} onClick={() => act(`Approved PO line ${rec.sku_id}`, () => api.procure(rec.rec_id, actor.name))}>
             Approve PO line · {fmt(rec.final_qty)} units

@@ -4,7 +4,7 @@ import { X } from 'lucide-react'
 import { useApp } from '../ctx'
 import { cover, fmt, pct, recState, statusState } from '../format'
 import { lockScroll } from '../motion'
-import { SkuChart } from './Charts'
+import { PALETTE, SkuChart } from './Charts'
 import { Decide } from './Decide'
 
 export function SkuDrawer() {
@@ -31,12 +31,12 @@ export function SkuDrawer() {
   return (
     <>
       <div className={`scrim ${open ? 'open' : ''}`} onClick={() => openSku(null)} aria-hidden="true" />
-      <aside className={`drawer ${open ? 'open' : ''}`} role="dialog" aria-modal="true" aria-label={rec ? `${rec.sku_id} details` : 'SKU details'} data-lenis-prevent>
+      <aside className={`drawer ${open ? 'open' : ''}`} role="dialog" aria-modal="true" aria-label={rec ? `${rec.sku_name} evidence` : 'Product evidence'}>
         {rec && (
           <>
             <div className="drawer-head">
               <div>
-                <div className="fine">
+                <div className="sc">
                   {rec.sku_id} · {rec.category} · {rec.perishability === 'High' ? 'Perishable' : 'Standard'}
                 </div>
                 <div className="subtitle">{rec.sku_name.replace('Freshroots ', '')}</div>
@@ -46,7 +46,7 @@ export function SkuDrawer() {
               </button>
             </div>
             <div className="drawer-body">
-              <div className="figures" style={{ ['--cols' as string]: 3, marginTop: 20 }}>
+              <div className="figures" style={{ ['--cols' as string]: 3, marginTop: 4 }}>
                 <div className="figure">
                   <span className={`figure-num md ${st === 'crit' ? 'hl-red' : st === 'warn' ? 'hl-orange' : ''}`}>{cover(rec)}</span>
                   <span className="figure-label">weeks of cover</span>
@@ -66,23 +66,30 @@ export function SkuDrawer() {
                 </div>
               </div>
 
-              <div className="sheet" style={{ marginTop: 32, padding: 20 }}>
+              <div className="sheet" style={{ marginTop: 28 }}>
+                <h3 className="subtitle" style={{ marginBottom: 10 }}>
+                  Sixteen weeks of sales
+                </h3>
                 <SkuChart weekly={weekly} adjusted={rec.adjusted_weekly_demand} window={state.meta.window} compact />
                 <div className="legend">
                   <span>
-                    <i style={{ background: '#1d1d1f' }} />
+                    <i className="box" style={{ background: PALETTE.ink2 }} />
                     Last 4 weeks
                   </span>
                   <span>
-                    <i style={{ background: '#8fd3a1' }} />
-                    Festival-month week
+                    <i className="box" style={{ background: PALETTE.bar }} />
+                    Earlier weeks
                   </span>
                   <span>
-                    <i style={{ background: '#ff9f0a', height: 3 }} />
-                    Trailing 12-week average
+                    <i className="box" style={{ background: PALETTE.paper2, border: `1px solid ${PALETTE.rule}` }} />
+                    Festival month
                   </span>
                   <span>
-                    <i style={{ background: '#a34a00', height: 2 }} />
+                    <i style={{ background: PALETTE.moss }} />
+                    12-week average
+                  </span>
+                  <span>
+                    <i style={{ background: `repeating-linear-gradient(90deg, ${PALETTE.brick} 0 5px, transparent 5px 9px)` }} />
                     Demand used for cover
                   </span>
                 </div>
@@ -102,7 +109,7 @@ export function SkuDrawer() {
                   {rec.explanation}
                 </p>
                 {rec.conflicts.length > 0 && (
-                  <p className="small" style={{ color: 'var(--orange-ink)' }}>
+                  <p className="small" style={{ color: 'var(--ochre)' }}>
                     {rec.conflicts.join(' ')}
                   </p>
                 )}

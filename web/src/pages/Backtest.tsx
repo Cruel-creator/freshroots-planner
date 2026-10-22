@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react'
 import { api, type BacktestPayload } from '../api'
 import { useApp } from '../ctx'
 import { Card, Kpi, Page } from '../components/Nav'
-import { WeekColumns } from '../components/Charts'
+import { PALETTE, WeekColumns } from '../components/Charts'
 import { fmt } from '../format'
 
 const ORDER = ['baseline_12w', 'rules_engine', 'recent_4w']
 const LABEL: Record<string, string> = { baseline_12w: '12-week average', rules_engine: 'With festival uplift', recent_4w: '4-week average' }
-const COLOR: Record<string, string> = { baseline_12w: '#334155', rules_engine: '#d97706', recent_4w: '#0f766e' }
+const COLOR: Record<string, string> = { baseline_12w: PALETTE.ink2, rules_engine: PALETTE.brick, recent_4w: PALETTE.faint }
 
 export function Backtest() {
   const { state, toast } = useApp()
@@ -40,7 +40,11 @@ export function Backtest() {
   )
 
   return (
-    <Page title="Backtest" crumb="Each forecast uses only the weeks before it, then is scored on the week it predicted.">
+    <Page
+      kicker="Forecast check"
+      title={beats ? 'The festival uplift is earning its place.' : 'The plain average beat the festival uplift.'}
+      crumb="Each forecast uses only the weeks before it, then is scored on the week it predicted. Lower error is better."
+    >
       <div className="kpis" style={{ ['--n' as string]: 3 }}>
         {ORDER.filter(m => by[m]).map(m => (
           <Kpi
@@ -48,7 +52,7 @@ export function Backtest() {
             label={LABEL[m]}
             dot={COLOR[m]}
             value={`${(by[m].WAPE * 100).toFixed(1)}%`}
-            note={`MAE ${fmt(by[m].MAE, 1)} units · ${fmt(by[m].observations)} SKU-weeks`}
+            note={`MAE ${fmt(by[m].MAE, 1)} units · ${fmt(by[m].observations)} product-weeks`}
             tone={m === 'rules_engine' && !beats ? 'up' : undefined}
           />
         ))}
@@ -60,7 +64,7 @@ export function Backtest() {
           title="Error by target week"
           sub="WAPE = total absolute error ÷ total actual units. Lower is better."
           right={horizon}
-          foot={<span>{beats ? 'The festival uplift improves accuracy on this sample.' : 'From the first October week, the 25% uplift adds demand that did not arrive for most SKUs.'}</span>}
+          foot={<span>{beats ? 'The festival uplift improves accuracy on this sample.' : 'From the first October week, the 25% uplift adds demand that did not arrive for most products.'}</span>}
         >
           <WeekColumns data={bt.by_week} methods={ORDER} colors={COLOR} />
           <div className="legend">
@@ -80,13 +84,13 @@ export function Backtest() {
             <li>
               {fmt(bt.observations)} predictions evaluated; {fmt(bt.excluded)} origins excluded for having fewer than 12 weeks of history.
             </li>
-            <li>15 SKUs × 16 weeks is a small sample. Forecast accuracy is not a rupee outcome; no savings are claimed.</li>
+            <li>15 products × 16 weeks is a small sample. Forecast accuracy is not a rupee outcome; no savings are claimed.</li>
           </ul>
         </Card>
       </div>
 
       <div className="grid">
-        <Card className="span-12" title="Per SKU" sub="Green dot marks the lowest error for that SKU." bodyClass="flush">
+        <Card className="span-12" title="Per product" sub="The green dot marks the lowest error for each product." bodyClass="flush">
           <div className="table-scroll">
             <table className="data stack">
               <thead>
