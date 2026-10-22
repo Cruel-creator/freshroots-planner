@@ -8,3 +8,12 @@ reports/
 docs/
 .impeccable/
 requirements-dev.txt
+# Also never upload local state (the CLI ignores .gitignore when this file exists)
+data/*.db
+web/dist/
+.claude/
+.playwright-cli/
+.pytest_cache/
+deliverables/
+.env
+.env.*

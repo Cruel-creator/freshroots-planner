@@ -20,3 +20,6 @@ data/*.db
 .impeccable/review/
 docs/*.pdf
 deliverables/
+
+.vercel
+.env*
