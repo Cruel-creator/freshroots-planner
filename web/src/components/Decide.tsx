@@ -99,7 +99,7 @@ export function Decide({ rec, compact = false }: { rec: Rec; compact?: boolean }
       )
     return (
       <div className="stack-gap">
-        {open.length > 0 && <p className="hint" style={{ color: 'var(--ochre)' }}>Held: {open.length} open sales alert{open.length === 1 ? '' : 's'}. Priya must triage and you must acknowledge {open.length === 1 ? 'it' : 'them'} on Sales alerts.</p>}
+        {open.length > 0 && <p className="hint warn">Held: {open.length} open sales alert{open.length === 1 ? '' : 's'}. Priya must triage and you must acknowledge {open.length === 1 ? 'it' : 'them'} on Sales alerts.</p>}
         <div className="toolbar-left">
           <button className="btn btn-primary" disabled={open.length > 0} onClick={() => act(`Approved PO line ${rec.sku_id}`, () => api.procure(rec.rec_id, actor.name))}>
             Approve PO line · {fmt(rec.final_qty)} units

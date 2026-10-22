@@ -126,7 +126,7 @@ export function Card({ title, sub, right, foot, className = '', bodyClass = '', 
 }
 
 /** One figure in a ruled strip: the number first, then what it counts. */
-export function Kpi({ label, value, note, tone, dot }: { label: string; value: ReactNode; note?: ReactNode; tone?: 'up' | 'good' | 'warn'; dot?: string }) {
+export function Kpi({ label, value, note, tone, dot }: { label: string; value: ReactNode; note?: ReactNode; tone?: 'bad' | 'good' | 'warn'; dot?: string }) {
   return (
     <div className="kpi">
       <span className="kpi-label">

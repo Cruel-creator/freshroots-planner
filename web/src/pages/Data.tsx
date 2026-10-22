@@ -27,7 +27,7 @@ export function Data() {
       }
     >
       <div className="kpis" style={{ ['--n' as string]: 4 }}>
-        <Kpi label="Errors" value={q.errors} tone={q.errors ? 'up' : 'good'} note={q.errors ? 'Rows excluded and listed' : 'All rows usable'} />
+        <Kpi label="Errors" value={q.errors} tone={q.errors ? 'bad' : 'good'} note={q.errors ? 'Rows excluded and listed' : 'All rows usable'} />
         <Kpi label="Warnings" value={q.warnings} tone={q.warnings ? 'warn' : 'good'} />
         <Kpi label="Rows checked" value={fmt(rows)} note={`${files.length} files`} />
         <Kpi label="Rows excluded" value={excluded} />

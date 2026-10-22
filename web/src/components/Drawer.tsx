@@ -85,7 +85,7 @@ export function SkuDrawer() {
                     Festival month
                   </span>
                   <span>
-                    <i style={{ background: PALETTE.moss }} />
+                    <i style={{ background: PALETTE.ink }} />
                     12-week average
                   </span>
                   <span>
@@ -109,7 +109,7 @@ export function SkuDrawer() {
                   {rec.explanation}
                 </p>
                 {rec.conflicts.length > 0 && (
-                  <p className="small" style={{ color: 'var(--ochre)' }}>
+                  <p className="small note-warn">
                     {rec.conflicts.join(' ')}
                   </p>
                 )}

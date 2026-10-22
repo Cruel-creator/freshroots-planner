@@ -7,17 +7,22 @@ import { line } from 'd3-shape'
 import { max, min } from 'd3-array'
 import type { Weekly } from '../api'
 
+// Mirrors the tokens in styles.css (same names, camel-cased). Moss is for actions and
+// approved states only; data is drawn in ink, brick and ochre.
 export const PALETTE = {
+  paper: '#f5f1e8',
   ink: '#1d1b17',
   ink2: '#45413a',
   muted: '#736c5c',
   faint: '#a59d8c',
   rule: '#e0d8c6',
+  grid: '#e9e2d2',
   paper2: '#efe9dc',
   bar: '#cdc3ad',
   moss: '#3b5a2b',
   brick: '#a3412b',
-  ochre: '#b8862a',
+  ochre: '#8f6210',
+  ochreDot: '#b8862a',
 }
 const short = (w: string) => w.replace(/^\d{4}-/, '')
 
@@ -85,7 +90,7 @@ export function SalesChart({ weekly }: { weekly: Weekly[] }) {
       ))}
       {last && (
         <g>
-          <circle cx={x(last.week)} cy={y(last.units)} r={4.5} fill={PALETTE.moss} />
+          <circle cx={x(last.week)} cy={y(last.units)} r={4.5} fill={PALETTE.ink} />
           <text className="callout" x={x(last.week)! - 10} y={y(last.units) - 14} textAnchor="end">
             {last.units.toLocaleString('en-IN')} this week
           </text>
@@ -131,7 +136,8 @@ export function SkuChart({ weekly, adjusted, window, compact = false }: { weekly
           </title>
         </rect>
       ))}
-      <path d={base} fill="none" stroke={PALETTE.moss} strokeWidth={2} />
+      <path d={base} fill="none" stroke={PALETTE.paper} strokeWidth={5} strokeLinejoin="round" />
+      <path d={base} fill="none" stroke={PALETTE.ink} strokeWidth={2} strokeLinejoin="round" />
       {adjusted !== null && (
         <g>
           <line x1={m.l} x2={W - m.r} y1={y(adjusted)} y2={y(adjusted)} stroke={PALETTE.brick} strokeWidth={1.4} strokeDasharray="5 5" />
@@ -208,7 +214,7 @@ export function SignalStrip({ weeks, signals, skus }: { weeks: string[]; signals
   const m = { t: 6, r: 8, b: 26, l: 64 }
   const H = m.t + skus.length * row + m.b
   const x = scaleBand<string>().domain(weeks).range([m.l, W - m.r]).padding(0.14)
-  const color: Record<string, string> = { DROP_VS_TREND: PALETTE.brick, DROP_WEEK_ON_WEEK: PALETTE.ochre, SPIKE_VS_TREND: PALETTE.ink2 }
+  const color: Record<string, string> = { DROP_VS_TREND: PALETTE.brick, DROP_WEEK_ON_WEEK: PALETTE.ochreDot, SPIKE_VS_TREND: PALETTE.ink2 }
   return (
     <svg className={`chart ${narrow ? 'narrow' : ''}`} viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Sales alerts by week and product">
       {skus.map((s, i) => (
@@ -219,7 +225,7 @@ export function SignalStrip({ weeks, signals, skus }: { weeks: string[]; signals
           {weeks.map(w => {
             const sg = signals.find(z => z.sku_id === s && z.week === w)
             return (
-              <rect key={w} x={x(w)} y={m.t + i * row + 3} width={x.bandwidth()} height={row - 6} rx={1} fill={sg ? color[sg.signal_type] || PALETTE.faint : '#e9e2d2'}>
+              <rect key={w} x={x(w)} y={m.t + i * row + 3} width={x.bandwidth()} height={row - 6} rx={1} fill={sg ? color[sg.signal_type] || PALETTE.faint : PALETTE.grid}>
                 {sg && (
                   <title>
                     {s} {w}: {sg.signal_type.replaceAll('_', ' ').toLowerCase()} {(sg.change_pct * 100).toFixed(1)}%

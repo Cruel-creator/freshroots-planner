@@ -97,7 +97,7 @@ export function Signals() {
               Drop against the trend
             </span>
             <span>
-              <i className="box" style={{ background: PALETTE.ochre }} />
+              <i className="box" style={{ background: PALETTE.ochreDot }} />
               Week-on-week drop
             </span>
             <span>

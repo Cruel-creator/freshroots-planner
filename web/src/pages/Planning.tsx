@@ -127,7 +127,7 @@ export function Planning() {
                   </td>
                   <td className="r hide-sm">{fmt(r.recent_4w_avg, 1)}</td>
                   <td className="r hide-sm">{fmt(r.baseline_12w_avg, 1)}</td>
-                  <td className="r hide-sm" style={{ color: (r.demand_change_pct ?? 0) > state.meta.thresholds.high_demand ? 'var(--ochre)' : undefined }}>
+                  <td className={`r hide-sm ${(r.demand_change_pct ?? 0) > state.meta.thresholds.high_demand ? 'hl-orange' : ''}`}>
                     {pct(r.demand_change_pct)}
                   </td>
                   <td className="r hide-sm">{fmt(r.adjusted_weekly_demand, 1)}</td>

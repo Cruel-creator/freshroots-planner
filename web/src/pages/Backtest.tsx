@@ -53,7 +53,7 @@ export function Backtest() {
             dot={COLOR[m]}
             value={`${(by[m].WAPE * 100).toFixed(1)}%`}
             note={`MAE ${fmt(by[m].MAE, 1)} units · ${fmt(by[m].observations)} product-weeks`}
-            tone={m === 'rules_engine' && !beats ? 'up' : undefined}
+            tone={m === 'rules_engine' && !beats ? 'bad' : undefined}
           />
         ))}
       </div>

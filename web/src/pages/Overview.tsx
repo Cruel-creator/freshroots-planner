@@ -192,7 +192,7 @@ export function Overview() {
             <p>Units sold each week across all {recs.length} products.</p>
           </div>
         </div>
-        <div className="spread indent">
+        <div className="indent chart-col">
           <div>
             <SalesChart weekly={state.weekly} />
             <p className="caption">
@@ -200,11 +200,19 @@ export function Overview() {
               {m.planning_month_festival && growth < uplift * 0.6 ? `, well short of the ${uplift}% uplift the rules assume.` : '.'}
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="s">
+        <div className="shead">
+          <div className="no num">03</div>
           <div>
-            <div className="sc">03 · Can we trust the forecast?</div>
-            <p className="fine" style={{ margin: '8px 0 6px', fontSize: 14 }}>
-              Average error, predicting past weeks one week ahead. Further left is better.
-            </p>
+            <h2>Can we trust the forecast?</h2>
+            <p>Average error when each method predicted past weeks, one week ahead. Further left is better.</p>
+          </div>
+        </div>
+        <div className="spread indent">
+          <div>
             <div>
               {methods.map(([k, label, sub]) => {
                 const v = bt[k].WAPE
@@ -233,6 +241,8 @@ export function Overview() {
                 <span>{Math.round(scaleMax * 100)}%</span>
               </div>
             </div>
+          </div>
+          <div>
             <div className="margin-note">
               {upliftLoses ? (
                 <>

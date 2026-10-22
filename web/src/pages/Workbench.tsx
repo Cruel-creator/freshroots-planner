@@ -53,9 +53,9 @@ export function Workbench() {
       action={primary}
     >
       <div className="kpis" style={{ ['--n' as string]: 5 }}>
-        <Kpi label="With Raghav" value={count('Pending planner review')} dot={PALETTE.ochre} />
+        <Kpi label="With Raghav" value={count('Pending planner review')} dot={PALETTE.ochreDot} />
         <Kpi label="Signed off, no order" value={count('Planner approved') + count('Planner overridden')} />
-        <Kpi label="With procurement" value={count('Pending procurement approval')} dot={PALETTE.ochre} />
+        <Kpi label="With procurement" value={count('Pending procurement approval')} dot={PALETTE.ochreDot} />
         <Kpi label="Approved to order" value={ready} dot={PALETTE.moss} />
         <Kpi label="Exported as draft" value={count('Exported as draft')} />
       </div>
