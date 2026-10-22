@@ -1,70 +1,71 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-22T07:20:00Z",
+  "generatedAt": "2026-10-22T07:10:00Z",
   "title": "Design System: Freshroots Planner",
   "extensions": {
     "colorMeta": {
-      "brand": { "role": "primary", "displayName": "Freshroots Green", "canonical": "#15803d", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#f0fdf4"] },
-      "brand-hover": { "role": "primary", "displayName": "Deep Green", "canonical": "#166534", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#f0fdf4"] },
-      "brand-soft": { "role": "primary", "displayName": "Green Wash", "canonical": "#e8f5ec", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#e8f5ec"] },
-      "brand-ink": { "role": "primary", "displayName": "Forest Ink", "canonical": "#14532d", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#f0fdf4"] },
-      "canvas": { "role": "neutral", "displayName": "Cool Canvas", "canonical": "#f5f6f8", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f5f6f8"] },
-      "card": { "role": "neutral", "displayName": "Card White", "canonical": "#ffffff", "tonalRamp": ["#111827", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb", "#ffffff"] },
-      "sunken": { "role": "neutral", "displayName": "Sunken", "canonical": "#f9fafb", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
-      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#111827", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
-      "ink-2": { "role": "neutral", "displayName": "Slate Ink", "canonical": "#4b5563", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
-      "ink-3": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#6b7280", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
-      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#e5e7eb", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f9fafb"] },
-      "line-soft": { "role": "neutral", "displayName": "Soft Hairline", "canonical": "#f0f1f3", "tonalRamp": ["#111827", "#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af", "#e5e7eb", "#f0f1f3"] },
-      "ok": { "role": "state", "displayName": "Good Green", "canonical": "#16a34a", "tonalRamp": ["#052e16", "#14532d", "#15803d", "#16a34a", "#4ade80", "#86efac", "#bbf7d0", "#e7f6ec"] },
-      "ok-ink": { "role": "state", "displayName": "Good Green Ink", "canonical": "#15803d", "tonalRamp": ["#052e16", "#14532d", "#15803d", "#16a34a", "#4ade80", "#86efac", "#bbf7d0", "#e7f6ec"] },
-      "ok-soft": { "role": "state", "displayName": "Good Green Wash", "canonical": "#e7f6ec", "tonalRamp": ["#052e16", "#14532d", "#15803d", "#16a34a", "#4ade80", "#86efac", "#bbf7d0", "#e7f6ec"] },
-      "warn": { "role": "state", "displayName": "Warning Amber", "canonical": "#d97706", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fdf3e2"] },
-      "warn-ink": { "role": "state", "displayName": "Amber Ink", "canonical": "#b45309", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fdf3e2"] },
-      "warn-soft": { "role": "state", "displayName": "Amber Wash", "canonical": "#fdf3e2", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fdf3e2"] },
-      "crit": { "role": "state", "displayName": "Critical Red", "canonical": "#dc2626", "tonalRamp": ["#450a0a", "#7f1d1d", "#b91c1c", "#dc2626", "#f87171", "#fca5a5", "#fecaca", "#fdecec"] },
-      "crit-ink": { "role": "state", "displayName": "Critical Ink", "canonical": "#b91c1c", "tonalRamp": ["#450a0a", "#7f1d1d", "#b91c1c", "#dc2626", "#f87171", "#fca5a5", "#fecaca", "#fdecec"] },
-      "crit-soft": { "role": "state", "displayName": "Critical Wash", "canonical": "#fdecec", "tonalRamp": ["#450a0a", "#7f1d1d", "#b91c1c", "#dc2626", "#f87171", "#fca5a5", "#fecaca", "#fdecec"] },
-      "series-slate": { "role": "data", "displayName": "Series Slate", "canonical": "#334155", "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f8fafc"] },
-      "series-teal": { "role": "data", "displayName": "Series Teal", "canonical": "#0f766e", "tonalRamp": ["#042f2e", "#134e4a", "#0f766e", "#0d9488", "#2dd4bf", "#5eead4", "#99f6e4", "#f0fdfa"] },
-      "series-amber": { "role": "data", "displayName": "Series Amber", "canonical": "#d97706", "tonalRamp": ["#451a03", "#78350f", "#b45309", "#d97706", "#f59e0b", "#fcd34d", "#fde68a", "#fffbeb"] },
-      "series-mist": { "role": "data", "displayName": "Series Mist", "canonical": "#94a3b8", "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f8fafc"] }
+      "paper": { "role": "neutral", "displayName": "Oat Paper", "canonical": "#f5f1e8", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "paper-2": { "role": "neutral", "displayName": "Paper 2", "canonical": "#efe9dc", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "paper-3": { "role": "neutral", "displayName": "Paper 3", "canonical": "#e7dfcc", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e7dfcc", "#efe9dc", "#f5f1e8"] },
+      "sheet": { "role": "neutral", "displayName": "Sheet", "canonical": "#fbf9f4", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#f5f1e8", "#fbf9f4"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1d1b17", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2", "canonical": "#45413a", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "muted": { "role": "neutral", "displayName": "Muted", "canonical": "#736c5c", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "faint": { "role": "neutral", "displayName": "Faint", "canonical": "#a59d8c", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#e0d8c6", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "rule-strong": { "role": "neutral", "displayName": "Strong Rule", "canonical": "#c9bfa9", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#c9bfa9", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "chart-bar": { "role": "data", "displayName": "Chart Bar", "canonical": "#cdc3ad", "tonalRamp": ["#1d1b17", "#45413a", "#736c5c", "#a59d8c", "#cdc3ad", "#e0d8c6", "#efe9dc", "#f5f1e8"] },
+      "moss": { "role": "primary", "displayName": "Moss", "canonical": "#3b5a2b", "tonalRamp": ["#1f3016", "#2e4721", "#3b5a2b", "#55743f", "#7e9668", "#b3c2a0", "#d3dcc4", "#e7ecdc"] },
+      "moss-deep": { "role": "primary", "displayName": "Moss Deep", "canonical": "#2e4721", "tonalRamp": ["#1f3016", "#2e4721", "#3b5a2b", "#55743f", "#7e9668", "#b3c2a0", "#d3dcc4", "#e7ecdc"] },
+      "moss-wash": { "role": "primary", "displayName": "Moss Wash", "canonical": "#e7ecdc", "tonalRamp": ["#1f3016", "#2e4721", "#3b5a2b", "#55743f", "#7e9668", "#b3c2a0", "#d3dcc4", "#e7ecdc"] },
+      "brick": { "role": "state", "displayName": "Brick (running short)", "canonical": "#a3412b", "tonalRamp": ["#4f1f14", "#7a2f1f", "#a3412b", "#c0634d", "#d68f7d", "#e6b8aa", "#efcfc4", "#f4e1d9"] },
+      "brick-wash": { "role": "state", "displayName": "Brick Wash", "canonical": "#f4e1d9", "tonalRamp": ["#4f1f14", "#7a2f1f", "#a3412b", "#c0634d", "#d68f7d", "#e6b8aa", "#efcfc4", "#f4e1d9"] },
+      "ochre": { "role": "state", "displayName": "Ochre (overstocked), text", "canonical": "#8f6210", "tonalRamp": ["#4a3308", "#6e4c0c", "#8f6210", "#b8862a", "#cfa553", "#e0c588", "#ecdab0", "#f3e8cf"] },
+      "ochre-dot": { "role": "state", "displayName": "Ochre, marks", "canonical": "#b8862a", "tonalRamp": ["#4a3308", "#6e4c0c", "#8f6210", "#b8862a", "#cfa553", "#e0c588", "#ecdab0", "#f3e8cf"] },
+      "ochre-wash": { "role": "state", "displayName": "Ochre Wash", "canonical": "#f3e8cf", "tonalRamp": ["#4a3308", "#6e4c0c", "#8f6210", "#b8862a", "#cfa553", "#e0c588", "#ecdab0", "#f3e8cf"] }
     },
     "typographyMeta": {
-      "kpi": { "displayName": "KPI value", "purpose": "KPI row figures (22px under 640px); figure tiles use 24px. Counts up once on load." },
-      "headline": { "displayName": "Headline", "purpose": "The welcome strip line only; 20px on phones." },
-      "page-title": { "displayName": "Page title", "purpose": "Sticky header h1, paired with a 12.5px muted crumb." },
-      "title": { "displayName": "Card title", "purpose": "Card titles, above a 12.5px muted sub-line." },
-      "body": { "displayName": "Body", "purpose": "Paragraphs, capped at 72ch." },
-      "table": { "displayName": "Table", "purpose": "Data table cells; numeric columns right-aligned and tabular." },
-      "label": { "displayName": "Label", "purpose": "KPI labels, notes, captions, legends, crumbs." },
-      "column-head": { "displayName": "Column head", "purpose": "Sentence-case table headers on the sunken band." },
-      "mono": { "displayName": "Mono", "purpose": "Inline formula code only." }
+      "front-headline": { "displayName": "Front headline", "purpose": "The front page's one sentence stating the week's call; an italic brick phrase marks the decisive date." },
+      "headline": { "displayName": "Headline", "purpose": "Inner page heads; states the finding, max 26ch, balanced." },
+      "figure": { "displayName": "Figure", "purpose": "Figure strip values (32px under 640px); drawer figures 34px; docket counts 44px. No count-up." },
+      "section-head": { "displayName": "Section head", "purpose": "Numbered front-page sections beside a 52px faint numeral." },
+      "wordmark": { "displayName": "Wordmark", "purpose": "\"Freshroots Planning Brief\" in the masthead; the second half muted italic 400." },
+      "section-title": { "displayName": "Section title", "purpose": "Ruled section (Card) titles." },
+      "subtitle": { "displayName": "Subtitle", "purpose": "Sub-heads in pages and the drawer; the drawer's product name at 30px." },
+      "lede": { "displayName": "Lede", "purpose": "Under every headline, ink-2, max 64ch; 19px on the front page." },
+      "margin-note": { "displayName": "Margin note / caption", "purpose": "Chart captions, runway notes, empty states, the issue line (15px), the colophon line." },
+      "body": { "displayName": "Body", "purpose": "Sans running text, paragraphs capped at 72ch." },
+      "table": { "displayName": "Table", "purpose": "Data cells; numeric columns right-aligned with lining tabular figures." },
+      "label": { "displayName": "Label", "purpose": "Tabs, figure labels, field labels, legends, column heads (12px muted)." },
+      "small-caps": { "displayName": "Small caps", "purpose": "Runway group heads, the docket head, the drawer metadata line." },
+      "mono": { "displayName": "Mono", "purpose": "Values inside formula lists only." }
     },
     "shadows": [
-      { "name": "resting", "value": "0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04)", "purpose": "Cards, KPI cards, welcome strip, secondary buttons. Must stay invisible at a glance." },
-      { "name": "overlay", "value": "0 12px 32px rgba(16, 24, 40, 0.12)", "purpose": "SKU drawer, toast, off-canvas sidebar." },
-      { "name": "primary-lift", "value": "0 1px 2px rgba(21, 128, 61, 0.25)", "purpose": "Primary buttons only." },
-      { "name": "focus-halo", "value": "0 0 0 3px rgba(21, 128, 61, 0.15)", "purpose": "Focused inputs, selects and search, with a green border." },
-      { "name": "segment-pressed", "value": "0 1px 2px rgba(16, 24, 40, 0.1)", "purpose": "The pressed segment of a segmented control." }
+      { "name": "drawer-edge", "value": "-18px 0 40px -24px rgba(38, 33, 24, 0.35)", "purpose": "The product drawer only; the one surface that floats." },
+      { "name": "focus-halo", "value": "0 0 0 3px #e7ecdc", "purpose": "Focused inputs, selects and search, with a moss border." }
+    ],
+    "rules": [
+      { "name": "ink", "value": "1px solid #1d1b17", "purpose": "Opens a section, the masthead (doubled), the drawer head, the colophon." },
+      { "name": "strong", "value": "1px solid #c9bfa9", "purpose": "Closes page heads, the section bar, figure strips, table heads, the runway axis." },
+      { "name": "hairline", "value": "1px solid #e0d8c6", "purpose": "Separates rows, figures, list items, disclosures." },
+      { "name": "expectation", "value": "1px dashed #a59d8c", "purpose": "Edges of a target span; only expectations are dashed." }
+    ],
+    "texture": [
+      { "name": "grain", "value": "SVG fractalNoise, baseFrequency 0.85, 2 octaves, 180px tile, alpha 0.035", "purpose": "Laid over oat paper on the body and every sticky or floating surface." }
     ],
     "motion": [
-      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Shared curve for page entry, drawer, toast, reveals, meters and disclosure chevrons (GSAP uses expo.out)." },
-      { "name": "smooth-scroll", "value": "Lenis lerp 0.1 on the GSAP ticker, ScrollTrigger synced", "purpose": "Inertial page scroll; stopped while the mobile nav is open." },
-      { "name": "card-entrance", "value": "y 14px, opacity 0 -> 1, 0.7s expo.out, 35ms stagger", "purpose": "On-screen cards on page render; below-fold cards released by IntersectionObserver." },
-      { "name": "count-up", "value": "1.2s", "purpose": "KPI numerals count up once." },
-      { "name": "draw-on", "value": "stroke-dashoffset, 1.8s expo.out, ScrollTrigger top 85%, once", "purpose": "Chart lines draw on as they enter." },
-      { "name": "bar-grow", "value": "scale 0 -> 1, 1.1s expo.out, 25-35ms stagger, once", "purpose": "Chart columns and weeks-of-cover bars grow from zero." },
-      { "name": "donut-sweep", "value": "1.1s expo.out, 80ms stagger, once", "purpose": "Donut segments sweep in." },
-      { "name": "page-enter", "value": "0.5s ease-out, translateY 6px", "purpose": "Content well on route change." },
-      { "name": "drawer", "value": "0.5s ease-out transform", "purpose": "SKU drawer slide from the right." },
-      { "name": "control", "value": "0.15s", "purpose": "Colour, border and shadow transitions on buttons, inputs, nav items." },
-      { "name": "reduced-motion", "value": "all durations 0.001ms; GSAP, CountUp and DotGrid skipped", "purpose": "Every effect is optional; content is visible by default." }
+      { "name": "ease", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Shared curve for the page settle, drawer, toast and disclosure." },
+      { "name": "scroll", "value": "native", "purpose": "No smooth-scroll library; page scroll locks while the drawer is open." },
+      { "name": "page-settle", "value": "opacity 0 -> 1, 0.24s", "purpose": "Content on route change." },
+      { "name": "drawer", "value": "transform 0.26s; scrim opacity 0.2s", "purpose": "Product drawer slide from the right." },
+      { "name": "toast", "value": "translateY 12px -> 0 over 0.22s, opacity 0.18s", "purpose": "Toast rise." },
+      { "name": "control", "value": "0.12s", "purpose": "Colour and border transitions on buttons and inputs." },
+      { "name": "data", "value": "none", "purpose": "Charts and figures render in place; nothing counts up, draws on or loops." },
+      { "name": "reduced-motion", "value": "all animation and transition durations 0.001ms", "purpose": "Honoured everywhere." }
     ],
     "breakpoints": [
-      { "name": "kpi-3", "value": "1280px" },
       { "name": "spans-full", "value": "1100px" },
-      { "name": "sidebar-offcanvas", "value": "960px" },
+      { "name": "single-column", "value": "900px" },
       { "name": "phone", "value": "640px" },
       { "name": "table-stack", "value": "600px" }
     ]
@@ -74,111 +75,125 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The green action: header action, approve, submit.",
-      "html": "<button class=\"ds-btn ds-btn-primary\">Review decisions</button>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 14px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; font-size: 13px; font-weight: 550; border-radius: 8px; border: 1px solid transparent; cursor: pointer; white-space: nowrap; transition: background-color 0.15s, color 0.15s, border-color 0.15s, transform 0.15s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:active { transform: scale(0.98); } .ds-btn:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; } .ds-btn-primary { background: var(--brand, #15803d); color: #fff; box-shadow: 0 1px 2px rgba(21, 128, 61, 0.25); } .ds-btn-primary:hover { background: var(--brand-hover, #166534); }"
+      "description": "The one moss action per view, with a serif arrow.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Review 9 open lines <span class=\"ds-arrow\">&rarr;</span></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; font-size: 13.5px; font-weight: 500; border-radius: 3px; border: 1px solid transparent; cursor: pointer; white-space: nowrap; transition: background-color 0.12s, color 0.12s, border-color 0.12s; } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid #3b5a2b; outline-offset: 2px; } .ds-btn-primary { background: #3b5a2b; color: #fbf9f4; } .ds-btn-primary:hover { background: #2e4721; } .ds-arrow { font-family: \"Newsreader Variable\", Georgia, serif; font-size: 19px; line-height: 1; }"
     },
     {
-      "name": "Secondary Button",
+      "name": "Secondary and Danger Buttons",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Neutral companion action: navigation to lists, exports, small card-head actions.",
-      "html": "<button class=\"ds-btn-secondary\">All SKUs</button>",
-      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; height: 34px; padding: 0 14px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; font-size: 13px; font-weight: 550; border-radius: 8px; background: var(--card, #ffffff); color: var(--ink, #111827); border: 1px solid var(--line, #e5e7eb); box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04); cursor: pointer; transition: background-color 0.15s, transform 0.15s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-secondary:hover { background: var(--sunken, #f9fafb); } .ds-btn-secondary:active { transform: scale(0.98); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; }"
+      "description": "Transparent on paper with a strong-rule border; danger keeps brick to text and border.",
+      "html": "<div style=\"display:flex;gap:10px\"><button class=\"ds-btn2\">All products</button><button class=\"ds-btn2 ds-danger\">Reject</button></div>",
+      "css": ".ds-btn2 { display: inline-flex; align-items: center; height: 36px; padding: 0 16px; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; font-size: 13.5px; font-weight: 500; border-radius: 3px; background: transparent; color: #1d1b17; border: 1px solid #c9bfa9; cursor: pointer; transition: background-color 0.12s, border-color 0.12s; } .ds-btn2:hover { background: #efe9dc; border-color: #a59d8c; } .ds-btn2:focus-visible { outline: 2px solid #3b5a2b; outline-offset: 2px; } .ds-danger { color: #a3412b; border-color: #dcb7ab; } .ds-danger:hover { background: #f4e1d9; border-color: #dcb7ab; }"
     },
     {
-      "name": "Danger Button",
-      "kind": "button",
-      "refersTo": "button-danger",
-      "description": "Reject actions; white with red ink, fills pale red on hover.",
-      "html": "<button class=\"ds-btn-danger\">Reject</button>",
-      "css": ".ds-btn-danger { display: inline-flex; align-items: center; height: 34px; padding: 0 14px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; font-size: 13px; font-weight: 550; border-radius: 8px; background: var(--card, #ffffff); color: var(--crit-ink, #b91c1c); border: 1px solid #f3c7c7; cursor: pointer; transition: background-color 0.15s; } .ds-btn-danger:hover { background: var(--crit-soft, #fdecec); } .ds-btn-danger:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; }"
-    },
-    {
-      "name": "Sidebar Navigation",
+      "name": "Masthead and Section Bar",
       "kind": "nav",
-      "refersTo": "nav-item",
-      "description": "240px white sidebar: brand lock-up, icon nav with active green wash and amber pending counts.",
-      "html": "<nav class=\"ds-side\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-mark\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 20h10\"/><path d=\"M10 20c5.5-2.5.8-6.4 3-10\"/><path d=\"M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z\"/><path d=\"M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z\"/></svg></span><span>Freshroots<small>Demand planning</small></span></a><a class=\"ds-nav-item\" aria-current=\"page\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"9\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"5\" rx=\"1\"/><rect x=\"14\" y=\"12\" width=\"7\" height=\"9\" rx=\"1\"/><rect x=\"3\" y=\"16\" width=\"7\" height=\"5\" rx=\"1\"/></svg>Overview</a><a class=\"ds-nav-item\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/></svg>Exceptions<span class=\"ds-count\">1</span></a><a class=\"ds-nav-item\" href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/><path d=\"m9 14 2 2 4-4\"/></svg>Workbench<span class=\"ds-count\">15</span></a></nav>",
-      "css": ".ds-side { width: 240px; background: var(--card, #ffffff); border-right: 1px solid var(--line, #e5e7eb); padding: 18px 14px; display: flex; flex-direction: column; gap: 2px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-brand { display: flex; align-items: center; gap: 10px; padding: 4px 10px 18px; color: var(--ink, #111827); font-weight: 650; font-size: 15px; letter-spacing: -0.01em; text-decoration: none; } .ds-brand small { display: block; font-size: 11px; font-weight: 500; color: var(--ink-3, #6b7280); letter-spacing: 0; } .ds-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--brand, #15803d); color: #fff; display: grid; place-items: center; } .ds-nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px; color: var(--ink-2, #4b5563); font-weight: 500; font-size: 13.5px; text-decoration: none; transition: background-color 0.15s, color 0.15s; } .ds-nav-item:hover { background: var(--sunken, #f9fafb); color: var(--ink, #111827); } .ds-nav-item:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; } .ds-nav-item[aria-current=\"page\"] { background: var(--brand-soft, #e8f5ec); color: var(--brand-ink, #14532d); } .ds-count { margin-left: auto; font-size: 11px; font-weight: 600; background: var(--warn-soft, #fdf3e2); color: var(--warn-ink, #b45309); border-radius: 20px; padding: 1px 7px; font-variant-numeric: tabular-nums; }"
+      "refersTo": "section-tab",
+      "description": "Serif wordmark, italic issue line, double ink rule, then sentence-case section tabs with counts and a moss underline on the current one.",
+      "html": "<div class=\"ds-mast\"><div class=\"ds-mast-row\"><a class=\"ds-word\" href=\"#\">Freshroots <i>Planning Brief</i></a><span class=\"ds-issue\">No. 42 &middot; 17 October 2026</span></div><div class=\"ds-dbl\"></div><nav class=\"ds-tabs\"><a href=\"#\" aria-current=\"page\">The brief</a><a href=\"#\">Products<em>15</em></a><a href=\"#\">Exceptions<em>1</em></a><a href=\"#\">Approvals<em>9</em></a><span class=\"ds-reader\">Reading as <b>Raghav, Planner</b></span></nav></div>",
+      "css": ".ds-mast { width: 720px; background: #f5f1e8; padding-top: 18px; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-mast-row { display: flex; justify-content: space-between; align-items: baseline; } .ds-word { font: 500 26px/1 \"Newsreader Variable\", Georgia, serif; letter-spacing: -0.01em; color: #1d1b17; text-decoration: none; } .ds-word i { font-style: italic; font-weight: 400; color: #736c5c; } .ds-issue { font: italic 400 15px \"Newsreader Variable\", Georgia, serif; color: #45413a; font-variant-numeric: lining-nums tabular-nums; } .ds-dbl { margin-top: 14px; border-top: 1px solid #1d1b17; padding-top: 2px; } .ds-dbl::before { content: \"\"; display: block; border-top: 1px solid #1d1b17; } .ds-tabs { display: flex; align-items: center; gap: 26px; height: 46px; border-bottom: 1px solid #c9bfa9; } .ds-tabs a { display: flex; align-items: center; height: 100%; font-size: 13.5px; color: #45413a; text-decoration: none; border-bottom: 2px solid transparent; margin-bottom: -1px; } .ds-tabs a:hover { color: #1d1b17; } .ds-tabs a:focus-visible { outline: 2px solid #3b5a2b; outline-offset: 2px; } .ds-tabs a[aria-current=\"page\"] { color: #1d1b17; font-weight: 600; border-bottom-color: #3b5a2b; } .ds-tabs em { font-style: normal; color: #a59d8c; margin-left: 5px; font-variant-numeric: tabular-nums; } .ds-reader { margin-left: auto; font-size: 13px; color: #736c5c; } .ds-reader b { color: #1d1b17; font-weight: 500; }"
     },
     {
       "name": "Text Input",
       "kind": "input",
       "refersTo": "input",
-      "description": "White field with hairline border; focus turns the border green with a soft green halo.",
-      "html": "<label class=\"ds-field\"><span>Reason</span><input class=\"ds-input\" placeholder=\"Why override this quantity?\" /></label>",
-      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-field span { font-size: 12px; font-weight: 600; color: var(--ink-2, #4b5563); } .ds-input { font: inherit; font-size: 13.5px; color: var(--ink, #111827); background: var(--card, #ffffff); border: 1px solid var(--line, #e5e7eb); border-radius: 8px; padding: 8px 10px; transition: border-color 0.15s, box-shadow 0.15s; } .ds-input:focus, .ds-input:focus-visible { outline: none; border-color: var(--brand, #15803d); box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15); }"
+      "description": "Sheet ground, strong-rule border, 3px corners; focus turns moss with a moss-wash halo.",
+      "html": "<label class=\"ds-field\"><span>Reason</span><input class=\"ds-input\" placeholder=\"Why change this quantity?\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; width: 320px; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-field span { font-size: 12.5px; font-weight: 500; color: #45413a; } .ds-input { font: inherit; font-size: 14px; color: #1d1b17; background: #fbf9f4; border: 1px solid #c9bfa9; border-radius: 3px; padding: 8px 10px; transition: border-color 0.12s, box-shadow 0.12s; } .ds-input:focus, .ds-input:focus-visible { outline: none; border-color: #3b5a2b; box-shadow: 0 0 0 3px #e7ecdc; }"
     },
     {
-      "name": "Tags and State Dots",
+      "name": "States and Tags",
       "kind": "chip",
       "refersTo": "tag",
-      "description": "Tinted tags for context; dot-plus-text states for recommendation and approval status.",
-      "html": "<div class=\"ds-row\"><span class=\"ds-tag ds-tag-warn\">Festival month</span><span class=\"ds-tag\">15 SKUs</span><span class=\"ds-tag ds-tag-brand\">Rules v0.1.0</span><span class=\"ds-state ds-crit\">Reorder now</span><span class=\"ds-state ds-warn\">Pending planner review</span><span class=\"ds-state ds-ok\">Approved</span></div>",
-      "css": ".ds-row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-tag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11.5px; font-weight: 550; background: #f1f2f4; color: var(--ink-2, #4b5563); } .ds-tag-warn { background: var(--warn-soft, #fdf3e2); color: var(--warn-ink, #b45309); } .ds-tag-brand { background: var(--brand-soft, #e8f5ec); color: var(--brand-ink, #14532d); } .ds-state { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink, #111827); } .ds-state::before { content: \"\"; width: 7px; height: 7px; border-radius: 50%; background: var(--d, #6b7280); } .ds-crit { --d: #dc2626; } .ds-warn { --d: #d97706; } .ds-ok { --d: #16a34a; }"
+      "description": "Dot-plus-words states and nearly square tags; colour always travels with its meaning in text.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-state ds-crit\">Reorder now</span><span class=\"ds-state ds-warn\">Pause next order</span><span class=\"ds-state ds-ok\">Procurement approved</span><span class=\"ds-state ds-pending\">Pending planner review</span><span class=\"ds-tag ds-tag-warn\">Festival month</span><span class=\"ds-tag\">15 products</span></div>",
+      "css": ".ds-row { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-state { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: #45413a; } .ds-state::before { content: \"\"; width: 8px; height: 8px; border-radius: 50%; background: var(--d, #a59d8c); } .ds-crit { --d: #a3412b; color: #a3412b; } .ds-warn { --d: #b8862a; } .ds-ok { --d: #3b5a2b; } .ds-pending::before { background: transparent; border: 1.5px solid #45413a; } .ds-tag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 2px; font-size: 12px; font-weight: 500; background: #efe9dc; color: #45413a; } .ds-tag-warn { background: #f3e8cf; color: #8f6210; }"
     },
     {
-      "name": "Card",
+      "name": "Ruled Section",
       "kind": "card",
-      "refersTo": "card",
-      "description": "The container for everything: hairline border, 12px radius, titled head, body, optional footer with a text link.",
-      "html": "<section class=\"ds-card\"><div class=\"ds-card-head\"><h3>Forecast accuracy</h3><p>One week ahead, 60 SKU-weeks</p></div><div class=\"ds-card-body\">12-week average <b>8.7%</b></div><div class=\"ds-card-foot\"><span>The festival uplift overstates October demand.</span><a href=\"#\">Details</a></div></section>",
-      "css": ".ds-card { background: var(--card, #ffffff); border: 1px solid var(--line, #e5e7eb); border-radius: 12px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04); font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; color: var(--ink, #111827); max-width: 360px; } .ds-card-head { padding: 16px 18px 0; } .ds-card-head h3 { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; margin: 0; } .ds-card-head p { font-size: 12.5px; color: var(--ink-3, #6b7280); margin: 2px 0 0; } .ds-card-body { padding: 14px 18px 18px; font-size: 13px; display: flex; justify-content: space-between; } .ds-card-body b { font-weight: 650; font-variant-numeric: tabular-nums; } .ds-card-foot { border-top: 1px solid var(--line-soft, #f0f1f3); padding: 11px 18px; font-size: 12.5px; color: var(--ink-3, #6b7280); display: flex; justify-content: space-between; gap: 10px; } .ds-card-foot a { color: var(--brand, #15803d); font-weight: 550; text-decoration: none; } .ds-card-foot a:hover { text-decoration: underline; } .ds-card-foot a:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; }"
+      "refersTo": "section",
+      "description": "A section is an ink rule and a serif title, not a box; the foot sits on a hairline.",
+      "html": "<section class=\"ds-sec\"><h3>Forecast error by week</h3><p class=\"ds-sub\">One week ahead, 60 product-weeks</p><div class=\"ds-body\">The plain 12-week average missed by <b>8.7%</b> on average.</div><div class=\"ds-foot\"><span>The festival uplift overstates October demand.</span><a href=\"#\">Forecast detail</a></div></section>",
+      "css": ".ds-sec { width: 420px; border-top: 1px solid #1d1b17; padding-top: 12px; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; color: #1d1b17; background: #f5f1e8; } .ds-sec h3 { font: 400 22px/1.2 \"Newsreader Variable\", Georgia, serif; letter-spacing: -0.012em; margin: 0; } .ds-sub { font-size: 13.5px; color: #736c5c; margin: 4px 0 14px; } .ds-body { font-size: 14.5px; line-height: 1.6; } .ds-body b { font-weight: 600; font-variant-numeric: lining-nums tabular-nums; } .ds-foot { margin-top: 14px; padding-top: 10px; border-top: 1px solid #e0d8c6; font-size: 13px; color: #736c5c; display: flex; justify-content: space-between; gap: 12px; } .ds-foot a { color: #3b5a2b; font-weight: 600; text-decoration: none; } .ds-foot a:hover { text-decoration: underline; } .ds-foot a:focus-visible { outline: 2px solid #3b5a2b; outline-offset: 2px; }"
     },
     {
-      "name": "KPI Card",
+      "name": "Figure Strip",
       "kind": "card",
-      "refersTo": "kpi-card",
-      "description": "One figure per card in the KPI row: dot-led label, 28px tabular value, toned note.",
-      "html": "<div class=\"ds-kpi\"><span class=\"ds-kpi-label\"><i></i>Reorders</span><span class=\"ds-kpi-value\">5</span><span class=\"ds-kpi-note\">1,820 units recommended</span></div>",
-      "css": ".ds-kpi { width: 180px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; background: var(--card, #ffffff); border: 1px solid var(--line, #e5e7eb); border-radius: 12px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.04); font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-kpi-label { font-size: 12.5px; font-weight: 500; color: var(--ink-3, #6b7280); display: flex; align-items: center; gap: 6px; } .ds-kpi-label i { width: 8px; height: 8px; border-radius: 50%; background: #dc2626; } .ds-kpi-value { font-size: 28px; line-height: 1.15; font-weight: 650; letter-spacing: -0.025em; color: var(--ink, #111827); font-variant-numeric: tabular-nums; } .ds-kpi-note { font-size: 12px; color: var(--ink-3, #6b7280); }"
+      "refersTo": "figure-strip",
+      "description": "Figures between strong rules, divided by hairlines; the number first, then what it counts.",
+      "html": "<div class=\"ds-kpis\"><div class=\"ds-kpi\"><span class=\"ds-v\">5</span><span class=\"ds-l\"><i style=\"background:#a3412b\"></i>Reorders</span><span class=\"ds-n ds-up\">1,820 units suggested</span></div><div class=\"ds-kpi\"><span class=\"ds-v\">3<small>lines</small></span><span class=\"ds-l\">With procurement</span><span class=\"ds-n\">Oldest from Monday</span></div><div class=\"ds-kpi\"><span class=\"ds-v\">8.7%</span><span class=\"ds-l\">Forecast error</span><span class=\"ds-n ds-good\">Better than last month</span></div></div>",
+      "css": ".ds-kpis { width: 620px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #c9bfa9; border-bottom: 1px solid #c9bfa9; background: #f5f1e8; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-kpi { padding: 16px 20px; display: flex; flex-direction: column; gap: 2px; } .ds-kpi:first-child { padding-left: 0; } .ds-kpi + .ds-kpi { border-left: 1px solid #e0d8c6; } .ds-v { font: 400 40px/1.05 \"Newsreader Variable\", Georgia, serif; letter-spacing: -0.02em; color: #1d1b17; font-variant-numeric: lining-nums tabular-nums; } .ds-v small { font: 400 15px \"Instrument Sans Variable\", sans-serif; color: #736c5c; margin-left: 6px; letter-spacing: 0; } .ds-l { font-size: 13px; font-weight: 500; color: #45413a; display: flex; align-items: center; gap: 7px; } .ds-l i { width: 8px; height: 8px; border-radius: 50%; } .ds-n { font-size: 12.5px; color: #736c5c; } .ds-up { color: #a3412b; } .ds-good { color: #3b5a2b; }"
     },
     {
-      "name": "Weeks-of-Cover Row",
+      "name": "Runway Row",
       "kind": "custom",
-      "refersTo": "cover-chart",
-      "description": "Signature chart row: SKU name, track with its own target-window band, state-coloured bar, tabular value. Bars grow from zero on scroll.",
-      "html": "<div class=\"ds-cover\"><div class=\"ds-cover-row\"><button class=\"ds-cover-name\"><b>011</b>Multigrain Bread 400g</button><div class=\"ds-cover-track\"><div class=\"ds-cover-zone\" style=\"left:12.5%;width:4.2%\"></div><div class=\"ds-cover-bar\" style=\"width:7.5%;background:#dc2626\"></div></div><div class=\"ds-cover-val\" style=\"color:#b91c1c\">1.8</div></div><div class=\"ds-cover-row\"><button class=\"ds-cover-name\"><b>009</b>Chia Seeds 200g</button><div class=\"ds-cover-track\"><div class=\"ds-cover-zone\" style=\"left:25%;width:33.3%\"></div><div class=\"ds-cover-bar\" style=\"width:39%;background:#334155\"></div></div><div class=\"ds-cover-val\">9.4</div></div></div>",
-      "css": ".ds-cover { width: 560px; font-family: \"Inter Variable\", -apple-system, \"Segoe UI\", sans-serif; } .ds-cover-row { display: grid; grid-template-columns: 170px 1fr 48px; align-items: center; gap: 12px; height: 28px; } .ds-cover-name { font: inherit; font-size: 12.5px; color: var(--ink-2, #4b5563); background: none; border: 0; padding: 0; text-align: left; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .ds-cover-name b { color: var(--ink, #111827); font-weight: 600; margin-right: 6px; font-variant-numeric: tabular-nums; } .ds-cover-name:hover { color: var(--brand, #15803d); } .ds-cover-name:focus-visible { outline: 2px solid var(--brand, #15803d); outline-offset: 2px; border-radius: 6px; } .ds-cover-track { position: relative; height: 8px; background: var(--line-soft, #f0f1f3); border-radius: 8px; } .ds-cover-zone { position: absolute; top: -5px; bottom: -5px; background: rgba(22, 163, 74, 0.1); border-left: 1px dashed rgba(22, 163, 74, 0.6); border-right: 1px dashed rgba(22, 163, 74, 0.6); } .ds-cover-bar { position: absolute; left: 0; top: 0; height: 8px; border-radius: 8px; } .ds-cover-val { font-size: 12.5px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }"
+      "refersTo": "runway",
+      "description": "Signature: a run-out date on a calendar track with the product's target span, coloured by action and restated in an italic margin note.",
+      "html": "<div class=\"ds-run\"><div class=\"ds-grp\"><b>Reorder</b> &middot; 1</div><button class=\"ds-rrow ds-short\"><span class=\"ds-name\">Multigrain Bread 400g<small>perishable</small></span><span class=\"ds-track\"><span class=\"ds-band\" style=\"left:18.75%;width:6.25%\"></span><span class=\"ds-line\" style=\"width:11%\"></span><span class=\"ds-end\" style=\"left:calc(11% - 1px)\"></span><span class=\"ds-date\" style=\"left:11%\">29 Oct</span></span><span class=\"ds-note\"><b>Reorder 240</b> if Raghav agrees</span></button><div class=\"ds-grp\"><b>Pause</b> &middot; 1</div><button class=\"ds-rrow ds-over\"><span class=\"ds-name\">Chia Seeds 200g</span><span class=\"ds-track\"><span class=\"ds-band\" style=\"left:12.5%;width:75%\"></span><span class=\"ds-line\" style=\"width:94%\"></span><span class=\"ds-end\" style=\"left:calc(94% - 1px)\"></span><span class=\"ds-date\" style=\"left:94%\">2 Feb</span></span><span class=\"ds-note\"><b>Pause</b> over 14 weeks</span></button></div>",
+      "css": ".ds-run { width: 760px; background: #f5f1e8; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-grp { font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: #736c5c; padding: 18px 0 6px; } .ds-grp b { color: #1d1b17; } .ds-rrow { display: grid; grid-template-columns: 200px minmax(0, 1fr) 210px; gap: 24px; align-items: center; width: 100%; min-height: 50px; padding: 8px 0; background: none; border: 0; border-bottom: 1px solid #e0d8c6; font: inherit; color: inherit; text-align: left; cursor: pointer; } .ds-rrow:hover { background: #efe9dc; } .ds-rrow:focus-visible { outline: 2px solid #3b5a2b; outline-offset: 2px; } .ds-name { font-size: 14.5px; font-weight: 500; line-height: 1.3; } .ds-name small { display: block; color: #736c5c; font-weight: 400; font-size: 12px; } .ds-track { position: relative; height: 26px; } .ds-band { position: absolute; top: 4px; bottom: 4px; background: #e7dfcc; border-left: 1px dashed #a59d8c; border-right: 1px dashed #a59d8c; } .ds-line { position: absolute; left: 0; top: 12px; height: 2px; background: #45413a; } .ds-end { position: absolute; top: 5px; width: 2px; height: 16px; background: #45413a; } .ds-date { position: absolute; top: 3px; padding-left: 8px; font-size: 12.5px; font-weight: 500; white-space: nowrap; color: #45413a; font-variant-numeric: lining-nums tabular-nums; } .ds-short .ds-line, .ds-short .ds-end { background: #a3412b; } .ds-short .ds-date { color: #a3412b; } .ds-over .ds-line, .ds-over .ds-end { background: #b8862a; } .ds-over .ds-date { color: #8f6210; } .ds-note { font: italic 400 16px \"Newsreader Variable\", Georgia, serif; color: #45413a; } .ds-note b { font: normal 600 14px \"Instrument Sans Variable\", sans-serif; color: #1d1b17; }"
+    },
+    {
+      "name": "Docket",
+      "kind": "custom",
+      "refersTo": "docket",
+      "description": "Front-page aside: what is on Raghav's desk as serif counts with plain sentences, closed by the one moss action.",
+      "html": "<aside class=\"ds-dock\"><ol><li><span class=\"ds-big\">3</span><span class=\"ds-what\"><b>Reorder</b>1,820 units, earliest stock-out 24 Oct</span></li><li><span class=\"ds-big\">2</span><span class=\"ds-what\"><b>Pause</b>Chia Seeds and Quinoa are overstocked</span></li></ol><a class=\"ds-cta\" href=\"#\">Review 9 open lines <span>&rarr;</span></a></aside>",
+      "css": ".ds-dock { width: 360px; border-left: 1px solid #c9bfa9; padding-left: 32px; background: #f5f1e8; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-dock ol { list-style: none; margin: 0; padding: 0; } .ds-dock li { display: grid; grid-template-columns: 64px 1fr; align-items: baseline; padding: 12px 0; border-top: 1px solid #e0d8c6; } .ds-dock li:last-child { border-bottom: 1px solid #e0d8c6; } .ds-big { font: 400 44px/1 \"Newsreader Variable\", Georgia, serif; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums; } .ds-what { font-size: 14px; color: #45413a; } .ds-what b { display: block; color: #1d1b17; font-weight: 600; font-size: 15px; } .ds-cta { margin-top: 22px; display: flex; justify-content: space-between; align-items: center; height: 46px; padding: 0 16px; background: #3b5a2b; color: #fbf9f4; border-radius: 3px; font-size: 14.5px; font-weight: 500; text-decoration: none; } .ds-cta:hover { background: #2e4721; } .ds-cta:focus-visible { outline: 2px solid #3b5a2b; outline-offset: 2px; } .ds-cta span { font: 19px/1 \"Newsreader Variable\", Georgia, serif; }"
+    },
+    {
+      "name": "Margin Note",
+      "kind": "custom",
+      "refersTo": "margin-note",
+      "description": "A moss-washed aside with a 2px moss rule: one bold lead-in and one sentence.",
+      "html": "<div class=\"ds-mn\"><b>Worth raising with Raghav:</b> the plain 12-week average beat the festival uplift on past weeks.</div>",
+      "css": ".ds-mn { width: 360px; padding: 14px 16px; background: #e7ecdc; border-left: 2px solid #3b5a2b; font-family: \"Instrument Sans Variable\", ui-sans-serif, system-ui, sans-serif; font-size: 14px; line-height: 1.6; color: #45413a; } .ds-mn b { color: #2e4721; }"
     }
   ],
   "narrative": {
-    "northStar": "The Evidence Desk",
-    "overview": "Freshroots Planner is a light operations dashboard for a demand planner and a procurement approver. A fixed white sidebar, a frosted sticky header and a 12-column grid of white cards on a cool grey canvas carry the whole product; the planner reads the KPI row, scans the charts, opens a SKU and decides. Density and clarity come first: 14px body text, 13px tables, tabular numerals everywhere a number sits in a column, and a quiet greyscale chrome that lets the few coloured marks mean something.\n\nColour is rationed. Freshroots green is the one action and brand colour; red, amber and green appear only as state, and data series use slate, teal, amber and mist. Depth is a hairline border plus a barely-there two-layer shadow; nothing floats except the drawer, the toast and the mobile sidebar.\n\nApple applies to the motion, not the look: Lenis inertial scroll driven by the GSAP ticker, cards that rise in with a short eased stagger, numbers that count up, lines that draw on and bars that grow from zero as they enter the viewport. Every effect is skipped under reduced motion and content is visible by default. The product rejects the marketing-page look (full-bleed black bands, oversized display headlines) as firmly as the grey admin template.",
+    "northStar": "The Planning Brief",
+    "overview": "Freshroots Planner is a weekly bulletin for a fresh-food business, not a dashboard. Each week is an issue: a masthead with the wordmark \"Freshroots Planning Brief\", an issue line and a double ink rule, then a sticky section bar that reads like a newspaper's section index. The planner (Raghav) and procurement read it; they do not monitor it.\n\nThe front page states the week's call as a sentence, backs it with a lede, a docket of what is on Raghav's desk and one moss action. Below it, evidence is set the way a paper sets it: a pull-quote for the exception a person must judge, numbered sections, charts labelled in place, an italic caption, a moss-washed margin note and a colophon.\n\nThe ground is warm oat paper with a faint SVG grain; type is ink, not black. Newsreader carries everything that is read; Instrument Sans carries everything that is operated. Structure is drawn with hairline rules, never boxes or shadows; the only surface that floats is the product drawer. Motion is a 0.24s page fade and a 0.26s drawer slide; nothing animates data or loops.",
     "keyCharacteristics": [
-      "240px white sidebar with line icons, labels and pending counts; 60px frosted sticky header.",
-      "12-column card grid, 16px gaps, white cards with 1px borders and 12px corners.",
-      "One row of KPI cards opens every working page.",
-      "One green action colour; state colours only for meaning.",
-      "Inter Variable throughout, tabular numerals for every figure.",
-      "Motion is inertial, eased (expo-out) and once-only."
+      "Masthead with serif wordmark, italic issue line and a double ink rule; sticky 46px section bar with counts and a \"Reading as\" role picker.",
+      "Every headline states the finding in a sentence; a serif lede explains it.",
+      "Grained oat paper, ink type, hairline rules instead of cards; no shadows on the page.",
+      "One action colour (moss). Brick reports running short, ochre reports too much, always with words.",
+      "Newsreader for reading, Instrument Sans for operating; lining tabular numerals on every figure.",
+      "The runway: run-out dates on a calendar, not weeks of cover on a bar chart.",
+      "Motion is a fade and a slide; nothing loops."
     ],
     "rules": [
-      { "name": "The One Green Rule", "body": "Freshroots Green is the only colour that fills an action. It never tells one data category from another: in-window data uses Slate, healthy states use Good Green dots and text, and the only chart it draws is the single overall sales line.", "section": "colors" },
-      { "name": "The Meaning-Only Rule", "body": "Red, amber and state green appear only when they report a condition the data supports; a dot, a tag tint, a bar or a value colour, never a fill behind chrome.", "section": "colors" },
-      { "name": "The Ink-Variant Rule", "body": "State text on white uses the -ink step (crit-ink, warn-ink, ok-ink); the bright step is for dots, bars and swatches.", "section": "colors" },
-      { "name": "The Tabular Rule", "body": "Every number that can sit above or beside another number sets `font-variant-numeric: tabular-nums`: KPIs, table cells, cover values, meters, figure tiles, definition values.", "section": "typography" },
-      { "name": "The Sentence-Case Rule", "body": "Labels, column heads, nav and buttons are sentence case at normal tracking. Hierarchy is weight and ink, not capitals.", "section": "typography" },
-      { "name": "The Hairline-First Rule", "body": "A card is a border first; its shadow must stay invisible at a glance. Only the drawer, the toast and the mobile sidebar cast a visible shadow.", "section": "elevation" },
-      { "name": "The Frosted Header Rule", "body": "Sticky bars (page header, drawer head) are canvas at 82 to 90% opacity with a 14px backdrop blur and a hairline bottom rule.", "section": "elevation" }
+      { "name": "The One Action Colour Rule", "body": "Moss is the only colour that fills or underlines something you can act on. No other hue appears on a button, link or focus state; brick appears on a control only for the reject action, and only as text and border on transparent.", "section": "colors" },
+      { "name": "The Never Colour Alone Rule", "body": "Brick and ochre never carry meaning by themselves. Every coloured line, dot or date sits beside words that say the same thing, and every runway row has an accessible label that states the run-out date and action.", "section": "colors" },
+      { "name": "The Paper Ground Rule", "body": "Every surface is the same oat paper with grain; sticky bars and the drawer repeat the grain rather than switching to a flat or frosted fill. Only inputs sit on the lighter Sheet.", "section": "colors" },
+      { "name": "The Headline States the Finding Rule", "body": "A headline is a sentence with a verb and a number or date taken from the data, never a page name. The lede says why, and what happens next.", "section": "typography" },
+      { "name": "The Read in Serif, Operate in Sans Rule", "body": "Anything read as prose or as a figure is Newsreader; anything clicked, scanned in a column or filled in is Instrument Sans.", "section": "typography" },
+      { "name": "The Lining Figures Rule", "body": "Every figure that can sit above or beside another sets lining tabular numerals.", "section": "typography" },
+      { "name": "The Rules Not Boxes Rule", "body": "Structure is drawn with lines on paper: an ink rule over each section, hairlines between rows and figures, a strong rule to close a head or strip. No card backgrounds, bordered blocks, rounded panels or page shadows.", "section": "layout" },
+      { "name": "The One Floating Sheet Rule", "body": "The drawer is the only surface that lifts off the page. Everything else, including sticky bars and the toast, is flat.", "section": "elevation" },
+      { "name": "The Dates Over Weeks Rule", "body": "The runway shows when each product runs out as a calendar date, not weeks of cover. Weeks of cover appear only as a figure in the drawer, beside its target.", "section": "components" },
+      { "name": "The Nothing Loops Rule", "body": "No motion repeats, follows the pointer or animates data. The page fades once and the drawer slides.", "section": "components" }
     ],
     "dos": [
-      "**Do** open every working page with the header (title, crumb, role selector, primary action) and a KPI row before the card grid.",
-      "**Do** place content in white 12px-radius cards with 1px hairline borders on the 12-column, 16px-gap grid.",
-      "**Do** keep Freshroots Green (#15803d) for action fills, links, focus, the brand mark and the single overall sales line.",
-      "**Do** use red, amber and state green only to report a condition, with the -ink step for text on white.",
-      "**Do** set tabular numerals on every figure and right-align numeric table columns.",
-      "**Do** make every number or row that has evidence open it (the SKU drawer) with one click.",
-      "**Do** animate with the expo-out curve, once, on entry, and skip it all under reduced motion."
+      "**Do** write every headline as the finding, with a number or date from the data, followed by a serif lede.",
+      "**Do** keep moss for actions only: primary buttons, links, focus, the active tab.",
+      "**Do** pair every brick or ochre mark with words that say the same thing.",
+      "**Do** draw structure with rules on paper: ink to open, hairline to separate, strong rule to close.",
+      "**Do** set reading in Newsreader and operating in Instrument Sans, with lining tabular figures on every number.",
+      "**Do** label charts in place and shade festival weeks with a named band.",
+      "**Do** make every product row open the drawer with its evidence.",
+      "**Do** honour reduced motion and keep content visible without script."
     ],
     "donts": [
-      "**Don't** bring back full-bleed black bands, oversized display headlines or any marketing-page section rhythm.",
-      "**Don't** fall back to a generic grey admin template: keep the white cards, hairlines and single green accent.",
-      "**Don't** use Freshroots Green to tell data categories apart or to fill a control that is not an action.",
-      "**Don't** add visible shadows to cards; elevation is for the drawer, toast and mobile sidebar.",
-      "**Don't** set labels, column heads or buttons in uppercase or wide tracking.",
-      "**Don't** add looping or scroll-jacked animation; motion plays once and content never waits on it."
+      "**Don't** bring back the dashboard: no sidebar, white cards, card shadows, rounded panels or KPI tiles.",
+      "**Don't** use cool greys, pure black or pure white; the palette is oat and ink.",
+      "**Don't** fill a button or link with brick or ochre, or use moss to tell data categories apart.",
+      "**Don't** let colour be the only signal of short or over stock.",
+      "**Don't** express the runway as weeks of cover or as a bar chart.",
+      "**Don't** add count-ups, draw-ons, scroll-triggered reveals, smooth scrolling or anything that loops.",
+      "**Don't** title a page with its name when the data supports a sentence."
     ]
   }
 }

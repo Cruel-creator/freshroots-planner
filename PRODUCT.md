@@ -36,7 +36,14 @@ Validation with line-level findings; rules A–E; a rule-priority layer; an exce
 
 ## Brand Commitments
 
-The user pinned the look, then clarified it: the product must look like a clean data dashboard (sidebar navigation, KPI cards, chart grid, tables, like the team's earlier dashboards), not like a marketing website. "Apple" applies only to the feel of scrolling and animation (smooth inertial scroll, eased entrances, numbers counting, charts drawing on). The landing page gets a subtle background that suits a data product. Freshroots has no supplied logo or brand assets.
+The look is "The Planning Brief": a weekly bulletin for a fresh-food business, chosen by the user after a dashboard and a minimal version were both rejected. It takes its principles, not its look, from the user's Kargo Hiring tool:
+- evidence before opinion;
+- warm paper;
+- hairline rules instead of boxes;
+- one action colour;
+- headlines that state the finding.
+
+Its own signature is the runway calendar of run-out dates. Nothing fancy: no animated backgrounds, count-ups or scroll effects. People must be able to read the data and charts at a glance. Freshroots has no supplied logo or brand assets; the wordmark is set in type.
 
 ## Evidence on Hand
 

@@ -1,366 +1,401 @@
 ---
 name: Freshroots Planner
-description: A calm, light operations dashboard where every number is one click from its evidence. White cards on a cool canvas, one green action colour, Apple-grade motion as the finish.
+description: The Planning Brief. A weekly bulletin for a fresh-food business, set on grained oat paper in an editorial serif, with hairline rules instead of boxes. Moss is the only colour that acts; brick means running short, ochre means too much, and both always come with words.
 colors:
-  brand: "#15803d"
-  brand-hover: "#166534"
-  brand-soft: "#e8f5ec"
-  brand-ink: "#14532d"
-  canvas: "#f5f6f8"
-  card: "#ffffff"
-  sunken: "#f9fafb"
-  ink: "#111827"
-  ink-2: "#4b5563"
-  ink-3: "#6b7280"
-  line: "#e5e7eb"
-  line-soft: "#f0f1f3"
-  ok: "#16a34a"
-  ok-ink: "#15803d"
-  ok-soft: "#e7f6ec"
-  warn: "#d97706"
-  warn-ink: "#b45309"
-  warn-soft: "#fdf3e2"
-  crit: "#dc2626"
-  crit-ink: "#b91c1c"
-  crit-soft: "#fdecec"
-  series-slate: "#334155"
-  series-teal: "#0f766e"
-  series-amber: "#d97706"
-  series-mist: "#94a3b8"
+  paper: "#f5f1e8"
+  paper-2: "#efe9dc"
+  paper-3: "#e7dfcc"
+  sheet: "#fbf9f4"
+  ink: "#1d1b17"
+  ink-2: "#45413a"
+  muted: "#736c5c"
+  faint: "#a59d8c"
+  rule: "#e0d8c6"
+  rule-strong: "#c9bfa9"
+  chart-bar: "#cdc3ad"
+  moss: "#3b5a2b"
+  moss-deep: "#2e4721"
+  moss-wash: "#e7ecdc"
+  brick: "#a3412b"
+  brick-wash: "#f4e1d9"
+  ochre: "#8f6210"
+  ochre-dot: "#b8862a"
+  ochre-wash: "#f3e8cf"
 typography:
-  kpi:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
-    fontSize: "28px"
-    fontWeight: 650
-    lineHeight: 1.15
+  front-headline:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "clamp(2.4rem, 1.3rem + 3.2vw, 4.1rem)"
+    fontWeight: 400
+    lineHeight: 1.02
     letterSpacing: "-0.025em"
-    fontFeature: "\"tnum\""
   headline:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
-    fontSize: "24px"
-    fontWeight: 650
-    lineHeight: 1.2
-    letterSpacing: "-0.025em"
-  page-title:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
-    fontSize: "17px"
-    fontWeight: 650
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "clamp(1.9rem, 1.2rem + 2vw, 2.9rem)"
+    fontWeight: 400
+    lineHeight: 1.06
+    letterSpacing: "-0.022em"
+  figure:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "40px"
+    fontWeight: 400
+    lineHeight: 1.05
+    letterSpacing: "-0.02em"
+    fontFeature: "\"lnum\", \"tnum\""
+  section-head:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "30px"
+    fontWeight: 400
+    lineHeight: 1.1
     letterSpacing: "-0.015em"
-  title:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 600
-    letterSpacing: "-0.01em"
-  body:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 400
-    lineHeight: 1.5
-    letterSpacing: "-0.006em"
-    fontFeature: "\"cv11\", \"ss01\""
-  table:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
-    fontSize: "13px"
-    fontWeight: 400
-    lineHeight: 1.5
-    fontFeature: "\"tnum\""
-  label:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
-    fontSize: "12.5px"
+  wordmark:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "26px"
     fontWeight: 500
-    lineHeight: 1.45
-  column-head:
-    fontFamily: "Inter Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    lineHeight: 1
+    letterSpacing: "-0.01em"
+  section-title:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "22px"
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: "-0.012em"
+  subtitle:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "20px"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "-0.01em"
+  lede:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "17.5px"
+    fontWeight: 400
+    lineHeight: 1.55
+  margin-note:
+    fontFamily: "Newsreader Variable, Iowan Old Style, Georgia, serif"
+    fontSize: "16px"
+    fontWeight: 400
+    fontStyle: "italic"
+    lineHeight: 1.5
+  body:
+    fontFamily: "Instrument Sans Variable, ui-sans-serif, system-ui, Segoe UI, sans-serif"
+    fontSize: "14.5px"
+    fontWeight: 400
+    lineHeight: 1.6
+  table:
+    fontFamily: "Instrument Sans Variable, ui-sans-serif, system-ui, Segoe UI, sans-serif"
+    fontSize: "13.5px"
+    fontWeight: 400
+    fontFeature: "\"lnum\", \"tnum\""
+  label:
+    fontFamily: "Instrument Sans Variable, ui-sans-serif, system-ui, Segoe UI, sans-serif"
+    fontSize: "13px"
+    fontWeight: 500
+  small-caps:
+    fontFamily: "Instrument Sans Variable, ui-sans-serif, system-ui, Segoe UI, sans-serif"
     fontSize: "11.5px"
     fontWeight: 600
+    letterSpacing: "0.08em"
+    textTransform: "uppercase"
   mono:
-    fontFamily: "SF Mono, ui-monospace, Menlo, Consolas, monospace"
-    fontSize: "11.5px"
+    fontFamily: "ui-monospace, SF Mono, Menlo, Consolas, monospace"
+    fontSize: "12px"
 rounded:
-  pill: "20px"
-  card: "12px"
-  figure: "10px"
-  control: "8px"
-  tag: "6px"
+  control: "3px"
+  tag: "2px"
+  dot: "50%"
 spacing:
-  grid-gap: "16px"
-  card-x: "18px"
-  card-y: "16px"
-  content-x: "28px"
-  content-x-mobile: "16px"
-  sidebar-w: "240px"
-  header-h: "60px"
+  measure: "1200px"
+  gutter: "40px"
+  gutter-narrow: "18px"
+  section-bar-h: "46px"
+  column-gap: "48px"
+  row-gap: "40px"
+  section-top: "44px"
+  section-indent: "152px"
+  colophon-top: "64px"
 components:
   button-primary:
-    backgroundColor: "{colors.brand}"
-    textColor: "{colors.card}"
+    backgroundColor: "{colors.moss}"
+    textColor: "{colors.sheet}"
     rounded: "{rounded.control}"
-    padding: "0 14px"
-    height: "34px"
+    padding: "0 16px"
+    height: "36px"
   button-primary-hover:
-    backgroundColor: "{colors.brand-hover}"
+    backgroundColor: "{colors.moss-deep}"
   button-secondary:
-    backgroundColor: "{colors.card}"
+    backgroundColor: "transparent"
     textColor: "{colors.ink}"
     rounded: "{rounded.control}"
-    padding: "0 14px"
-    height: "34px"
+    padding: "0 16px"
+    height: "36px"
   button-secondary-hover:
-    backgroundColor: "{colors.sunken}"
+    backgroundColor: "{colors.paper-2}"
   button-quiet:
-    backgroundColor: "{colors.sunken}"
+    backgroundColor: "{colors.paper-2}"
     textColor: "{colors.ink}"
     rounded: "{rounded.control}"
-    padding: "0 14px"
-    height: "34px"
+    padding: "0 16px"
+    height: "36px"
+  button-quiet-pressed:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper}"
   button-danger:
-    backgroundColor: "{colors.card}"
-    textColor: "{colors.crit-ink}"
+    backgroundColor: "transparent"
+    textColor: "{colors.brick}"
     rounded: "{rounded.control}"
-    padding: "0 14px"
-    height: "34px"
+    padding: "0 16px"
+    height: "36px"
   button-danger-hover:
-    backgroundColor: "{colors.crit-soft}"
+    backgroundColor: "{colors.brick-wash}"
   button-small:
-    padding: "0 10px"
-    height: "28px"
-  card:
-    backgroundColor: "{colors.card}"
-    rounded: "{rounded.card}"
-    padding: "16px 18px 18px"
-  kpi-card:
-    backgroundColor: "{colors.card}"
+    padding: "0 12px"
+    height: "30px"
+  section:
     textColor: "{colors.ink}"
-    typography: "{typography.kpi}"
-    rounded: "{rounded.card}"
-    padding: "16px 18px"
-  nav-item:
+    typography: "{typography.section-title}"
+    padding: "12px 0 0"
+  figure-strip:
+    textColor: "{colors.ink}"
+    typography: "{typography.figure}"
+    padding: "16px 20px"
+  section-tab:
     textColor: "{colors.ink-2}"
-    rounded: "{rounded.control}"
-    padding: "8px 10px"
-  nav-item-active:
-    backgroundColor: "{colors.brand-soft}"
-    textColor: "{colors.brand-ink}"
-  nav-count:
-    backgroundColor: "{colors.warn-soft}"
-    textColor: "{colors.warn-ink}"
-    rounded: "{rounded.pill}"
-    padding: "1px 7px"
+    typography: "{typography.label}"
+  section-tab-active:
+    textColor: "{colors.ink}"
   input:
-    backgroundColor: "{colors.card}"
+    backgroundColor: "{colors.sheet}"
     textColor: "{colors.ink}"
     rounded: "{rounded.control}"
     padding: "8px 10px"
   tag:
-    backgroundColor: "#f1f2f4"
+    backgroundColor: "{colors.paper-2}"
     textColor: "{colors.ink-2}"
     rounded: "{rounded.tag}"
     padding: "0 8px"
     height: "22px"
-  tag-brand:
-    backgroundColor: "{colors.brand-soft}"
-    textColor: "{colors.brand-ink}"
-  tag-warn:
-    backgroundColor: "{colors.warn-soft}"
-    textColor: "{colors.warn-ink}"
   tag-crit:
-    backgroundColor: "{colors.crit-soft}"
-    textColor: "{colors.crit-ink}"
+    backgroundColor: "{colors.brick-wash}"
+    textColor: "{colors.brick}"
+  tag-warn:
+    backgroundColor: "{colors.ochre-wash}"
+    textColor: "{colors.ochre}"
+  tag-ok:
+    backgroundColor: "{colors.moss-wash}"
+    textColor: "{colors.moss-deep}"
   table-head:
-    backgroundColor: "{colors.sunken}"
-    textColor: "{colors.ink-3}"
-    typography: "{typography.column-head}"
-    padding: "9px 14px"
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.muted}"
+    padding: "10px 12px 8px"
   table-cell:
+    textColor: "{colors.ink-2}"
     typography: "{typography.table}"
-    padding: "11px 14px"
+    padding: "13px 12px"
+  margin-note:
+    backgroundColor: "{colors.moss-wash}"
+    textColor: "{colors.ink-2}"
+    padding: "14px 16px"
 ---
 
 # Design System: Freshroots Planner
 
 ## Overview
 
-**Creative North Star: "The Evidence Desk"**
+**Creative North Star: "The Planning Brief"**
 
-Freshroots Planner is a light operations dashboard for a demand planner and a procurement approver. A fixed white sidebar, a frosted sticky header and a 12-column grid of white cards on a cool grey canvas carry the whole product; the planner reads the KPI row, scans the charts, opens a SKU and decides. Density and clarity come first: 14px body text, 13px tables, tabular numerals everywhere a number sits in a column, and a quiet greyscale chrome that lets the few coloured marks mean something.
+Freshroots Planner is a weekly bulletin for a fresh-food business, not a dashboard. Each week is an issue: a masthead with the wordmark "Freshroots *Planning Brief*", an issue line ("No. 42 · 17 October 2026") and a double ink rule, then a sticky section bar that reads like a newspaper's section index. The planner (Raghav) and procurement read it; they do not monitor it.
 
-Colour is rationed. Freshroots green is the one action and brand colour; red, amber and green appear only as state, and data series use slate, teal, amber and mist. Depth is a hairline border plus a barely-there two-layer shadow; nothing floats except the drawer, the toast and the mobile sidebar.
+The front page states the week's call as a sentence ("Reorder three products. The first runs out on 24 October."), backs it with a lede, a docket of what is on Raghav's desk, and one moss action. Below it, evidence is set the way a paper sets it: a pull-quote for the exception a person must judge, numbered sections (01 The runway, 02 How demand moved), charts labelled in place, an italic caption, a moss-washed margin note and a colophon.
 
-Apple applies to the motion, not the look: Lenis inertial scroll driven by the GSAP ticker, cards that rise in with a short eased stagger, numbers that count up, lines that draw on and bars that grow from zero as they enter the viewport. Every effect is skipped under reduced motion and content is visible by default. The product rejects the marketing-page look (full-bleed black bands, oversized display headlines) as firmly as the grey admin template.
+The ground is warm oat paper with a faint SVG grain; type is ink, not black. An editorial serif (Newsreader) carries everything that is read: headlines, ledes, figures, section titles, captions, margin notes. A quiet sans (Instrument Sans) carries everything that is operated: tabs, buttons, tables, labels, forms. Structure is drawn with hairline rules, never boxes or shadows; the only surface that floats is the product drawer.
+
+Motion is almost absent. Scrolling is native, a page settles in with a 0.24s fade, the drawer slides in over 0.26s, and nothing animates data, follows the pointer or loops.
 
 **Key Characteristics:**
-- 240px white sidebar with line icons, labels and pending counts; 60px frosted sticky header.
-- 12-column card grid, 16px gaps, white cards with 1px borders and 12px corners.
-- One row of KPI cards opens every working page.
-- One green action colour; state colours only for meaning.
-- Inter Variable throughout, tabular numerals for every figure.
-- Motion is inertial, eased (expo-out) and once-only.
+- Masthead with serif wordmark, italic issue line and a double ink rule; sticky 46px section bar with counts and a "Reading as" role picker.
+- Every headline states the finding in a sentence; a serif lede explains it.
+- Grained oat paper, ink type, hairline rules instead of cards; no shadows on the page.
+- One action colour (moss). Brick reports running short, ochre reports too much, always with words.
+- Newsreader for reading, Instrument Sans for operating; lining tabular numerals on every figure.
+- The runway: run-out dates on a calendar, not weeks of cover on a bar chart.
+- Motion is a fade and a slide; nothing loops.
 
 ## Colors
 
-A cool, near-neutral grey system with one saturated green for action and three state hues that only ever report a condition.
+A warm paper-and-ink palette with three meaningful hues. Neutrals are all oat and umber; there is no cool grey anywhere.
 
-### Primary
-- **Freshroots Green** (brand): primary buttons, links, text links, the brand mark, focus rings, input focus borders, the single overall sales line and the plan timeline segments. **Deep Green** (brand-hover) is its hover state. **Green Wash** (brand-soft) with **Forest Ink** (brand-ink) marks the active nav item and brand tags.
+### Paper and ink
+- **Oat Paper** (paper): the page ground, always with the grain overlay; also the ground of every sticky surface (section bar, runway axis, sticky table heads, drawer and drawer head) so they read as the same sheet.
+- **Paper 2** (paper-2): hover ground for rows and secondary buttons, the quiet button, neutral tags, inline code, the festival band in charts.
+- **Paper 3** (paper-3): quiet-button hover; the runway's target span.
+- **Sheet** (sheet): input, select and search grounds; primary-button text.
+- **Ink** (ink): headlines, values, the masthead and section rules, active tab text, the toast ground, pressed quiet buttons.
+- **Ink 2** (ink-2): body copy in tables, ledes, on-track runway lines, the default chart data line and recent bars.
+- **Muted** (muted): sub-lines, captions in sans, column heads, axis text, small-caps labels.
+- **Faint** (faint): section-bar counts, the large section numerals, the dashed edges of target spans, neutral state rings.
+- **Rule** (rule) and **Strong Rule** (rule-strong): hairlines between rows and figures; the strong step closes page heads, section bars, figure strips, table heads and the runway axis.
+- **Chart Bar** (chart-bar): earlier-week bars in the product chart.
 
-### Neutral
-- **Cool Canvas** (canvas): the page ground behind cards, the frosted header tint and the drawer ground.
-- **Card White** (card): cards, sidebar, inputs, secondary buttons, sheets.
-- **Sunken** (sunken): table header band, quiet buttons, nav hover.
-- **Ink** (ink): headings, values, body text; also the toast ground and the "info" tag.
-- **Slate Ink** (ink-2): secondary text, inactive nav, field labels.
-- **Muted Ink** (ink-3): sub-lines, captions, chart axis text, column heads.
-- **Hairline** (line): card, input and control borders, header and sidebar rules.
-- **Soft Hairline** (line-soft): row dividers inside cards, chart tracks, card footers.
+### Action
+- **Moss** (moss): primary buttons, links and text links, focus outlines, input focus borders, the active tab underline. **Moss Deep** (moss-deep) is its hover and the ink for moss-washed text. **Moss Wash** (moss-wash) is the selection colour, the focus halo, approved tags and the margin note ground.
 
-### State (meaning only)
-- **Critical Red** (crit, crit-ink, crit-soft): below-minimum cover, reorders, errors, rejects, worsening figures.
-- **Warning Amber** (warn, warn-ink, warn-soft): pauses, pending work, exceptions, festival-month marks, nav counts.
-- **Good Green** (ok, ok-ink, ok-soft): approved, healthy, target-window bands. Its text step shares the brand hex; it is used as text and tint, never as a button fill.
-
-### Data series
-- **Slate** (series-slate), **Teal** (series-teal), **Amber** (series-amber), **Mist** (series-mist): categorical series in charts, meters and donuts. Slate is the default "within window" bar.
+### Meaning
+- **Brick** (brick, brick-wash): running short. Reorder runway lines and dates, the front-page run-out date, the worst forecast method, the demand-used-for-cover line, danger buttons, error toasts, flagged runway rows (a brick wash fading to paper), the pull-quote mark.
+- **Ochre** (ochre for text, ochre-dot for marks, ochre-wash for tints): too much stock. Pause runway lines and dates, warning tags and state dots, rule conflicts in the drawer.
 
 ### Named Rules
-**The One Green Rule.** Freshroots Green is the only colour that fills an action. It never tells one data category from another: in-window data uses Slate, healthy states use Good Green dots and text, and the only chart it draws is the single overall sales line.
+**The One Action Colour Rule.** Moss is the only colour that fills or underlines something you can act on. No other hue appears on a button, link or focus state; brick appears on a control only for the reject action, and only as text and border on transparent.
 
-**The Meaning-Only Rule.** Red, amber and state green appear only when they report a condition the data supports; a dot, a tag tint, a bar or a value colour, never a fill behind chrome.
+**The Never Colour Alone Rule.** Brick and ochre never carry meaning by themselves. Every coloured line, dot or date sits beside words that say the same thing ("Reorder 240", "Pause, over the 4-week limit", "runs out 24 Oct"), and every runway row has an accessible label that states the run-out date and action.
 
-**The Ink-Variant Rule.** State text on white uses the -ink step (crit-ink, warn-ink, ok-ink); the bright step is for dots, bars and swatches.
+**The Paper Ground Rule.** Every surface is the same oat paper with grain; sticky bars and the drawer repeat the grain rather than switching to a flat or frosted fill. Only inputs sit on the lighter Sheet.
 
 ## Typography
 
-**Display Font:** none; the product has no display tier.
-**Body Font:** Inter Variable (self-hosted via @fontsource-variable/inter, falling back to the system UI stack), with cv11 and ss01 on.
-**Label/Mono Font:** SF Mono stack, only for inline formula code.
+**Display and Reading Font:** Newsreader Variable (self-hosted, optical-size axis, roman and italic), falling back to Iowan Old Style and Georgia.
+**Operating Font:** Instrument Sans Variable (self-hosted, weight axis), falling back to the system UI stack.
+**Mono:** the system monospace stack, only for values inside formula lists.
 
-**Character:** One neutral grotesque at small, dense sizes, tightened slightly at weights 600 to 650 for titles and figures. Hierarchy comes from weight and ink step more than size.
+**Character:** A newspaper's pairing. The serif is set at weight 400 throughout and gets its hierarchy from size and tight negative tracking; italic carries voice (the issue line, captions, margin notes, the pull-quote, the front-page emphasis). The sans is small and plain at 400 to 600.
 
 ### Hierarchy
-- **KPI value** (650, 28px, 1.15, -0.025em, tabular): the KPI row; drops to 22px under 640px. Figure tiles use the same treatment at 24px.
-- **Headline** (650, 24px, -0.025em): the welcome strip line only; 20px on phones.
-- **Page title** (650, 17px, -0.015em): the header h1, paired with a 12.5px muted crumb.
-- **Title** (600, 14px, -0.01em): card titles, with a 12.5px muted sub-line beneath.
-- **Body** (400, 14px, 1.5, -0.006em): paragraphs capped at 72ch.
-- **Table** (400, 13px, tabular in right-aligned columns): data cells; 11.5px muted sub-lines for IDs.
-- **Label** (500 to 600, 12 to 12.5px, ink-3): KPI labels, notes, field labels, captions, legends.
-- **Column head** (600, 11.5px, ink-3, sentence case): table headers on the sunken band.
+- **Front headline** (serif 400, clamp 2.4 to 4.1rem, 1.02, -0.025em, balanced): the front page's one sentence; an italic brick phrase marks the date that matters.
+- **Headline** (serif 400, clamp 1.9 to 2.9rem, 1.06, -0.022em, max 26ch, balanced): inner page heads.
+- **Figure** (serif 400, 40px, 1.05, lining tabular): figure strips (32px under 640px); drawer figures 34px; docket counts 44px.
+- **Section head** (serif 400, 30px, 1.1): numbered sections, beside a 52px faint numeral (34px under 900px).
+- **Wordmark** (serif 500, 26px; 22px on phones) with "Planning Brief" in muted italic 400.
+- **Section title** (serif 400, 22px): ruled section titles. **Subtitle** (serif 400, 20px): sub-heads in the drawer and pages; the drawer's product name sets it at 30px (26px on phones).
+- **Lede** (serif 400, 17.5px, 1.55, ink-2, max 64ch): under every headline; 19px on the front page.
+- **Margin note / caption** (serif italic 400, 16px, 1.5): chart captions, runway notes, empty states; the issue line is 15px italic.
+- **Body** (sans 400, 14.5px, 1.6; paragraphs capped at 72ch).
+- **Table** (sans 13.5px; product names 14.5px weight 500; sub-lines 12.5px muted).
+- **Label** (sans 500, 12.5 to 13px): figure labels, field labels, legends, column heads (12px muted).
+- **Small caps** (sans 600, 11.5px, 0.08em, uppercase, muted): group labels in the runway, the docket head, the metadata line above the drawer's product name.
 
 ### Named Rules
-**The Tabular Rule.** Every number that can sit above or beside another number sets `font-variant-numeric: tabular-nums`: KPIs, table cells, cover values, meters, figure tiles, definition values.
+**The Headline States the Finding Rule.** A headline is a sentence with a verb and a number or date taken from the data ("Reorder three products. The first runs out on 24 October."), never a page name. The lede says why, and what happens next.
 
-**The Sentence-Case Rule.** Labels, column heads, nav and buttons are sentence case at normal tracking. Hierarchy is weight and ink, not capitals.
+**The Read in Serif, Operate in Sans Rule.** Anything a person reads as prose or as a figure is Newsreader; anything they click, scan in a column or fill in is Instrument Sans. Figures inside running sans text keep the sans.
+
+**The Lining Figures Rule.** Every figure that can sit above or beside another sets `font-variant-numeric: lining-nums tabular-nums` (the `.num` helper, numeric table cells, figure strips, drawer figures, runway dates, the issue line).
 
 ## Layout
 
-The shell is a two-column grid: the 240px sidebar (sticky, full height) and a main column holding the 60px sticky header and the content well. Content pads 24px top, 28px sides, 48px bottom, capped at 1480px.
+One centred column, max 1200px, with 40px gutters (18px under 900px). The masthead sits in it; the section bar runs full width and sticks at the top; content follows in the same column with 72px bottom padding and closes with a colophon on an ink rule 64px below.
 
-Pages are built from a 12-column grid with 16px gaps; cards take spans of 3, 4, 5, 6, 7, 8 or 12, and consecutive grids sit 16px apart. The KPI row is its own equal-column grid (six across by default, three under 1280px, two under 640px with 10px gaps).
+The front page is a two-column spread (1.65fr and at least 300px, 56px gap): headline, lede and byline on the left; the docket on the right behind a strong left rule. Numbered sections below use a 120px numeral column and a 32px gap; their content is indented 152px so it aligns under the section title. Within a section a "spread" pairs 1.5fr and 1fr with a 56px gap.
 
-Responsive steps: under 1100px every partial span goes full width; under 960px the sidebar becomes a 260px off-canvas panel opened from a header menu button over a scrim, and content padding drops to 16px; under 640px the header wraps, the crumb hides, the role selector fills the row, form grids go single column and charts switch to a narrow viewBox; under 600px stacking tables turn each row into a two-column labelled card.
+Inner pages open with a page head (headline, lede, up to two actions bottom-right) closed by a strong rule, 32px above the content. Content sits on a 12-column grid with 48px column gaps and 40px row gaps; spans of 3 to 12. A figure strip, when present, sits between the page head and the grid.
 
-Internal rhythm: card heads pad 16px 18px 0, bodies 14px 18px 18px, footers 11px 18px over a soft hairline. Toolbars sit 14px above their content.
+Responsive steps: under 1100px all spans go full width, the section indent drops, and the runway columns tighten to 170px and 180px; under 900px the spread, front page, pull-quote and section heads collapse to one column, the docket loses its rule, the runway keeps only the track, and the role picker moves from the section bar into the masthead; under 640px figure strips go two-up, forms go single column and charts switch to a narrow viewBox with larger type; under 600px stacking tables turn each row into a labelled two-column block.
+
+### Named Rules
+**The Rules Not Boxes Rule.** Structure is drawn with lines on paper: an ink rule over each section, hairlines between rows and figures, a strong rule to close a head or strip. There are no card backgrounds, borders around content blocks, rounded panels or page shadows.
 
 ## Elevation & Depth
 
-Flat-plus-hairline. Cards are defined by a 1px border; a two-layer, 4%-opacity shadow only lifts them off the canvas. Real elevation is reserved for surfaces that cover others.
+Flat paper. Depth is a rule's weight, not a shadow: hairline (rule) separates, strong rule (rule-strong) closes, ink rule opens a section or the masthead (doubled under the masthead).
 
 ### Shadow Vocabulary
-- **Resting** (`box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 1px 3px rgba(16,24,40,0.04)`): cards, KPI cards, welcome strip, secondary buttons.
-- **Overlay** (`box-shadow: 0 12px 32px rgba(16,24,40,0.12)`): the SKU drawer, the toast, the off-canvas sidebar.
-- **Primary lift** (`box-shadow: 0 1px 2px rgba(21,128,61,0.25)`): primary buttons only.
-- **Focus halo** (`box-shadow: 0 0 0 3px rgba(21,128,61,0.15)`): focused inputs, selects and search.
+- **Drawer edge** (`box-shadow: -18px 0 40px -24px rgba(38, 33, 24, 0.35)`): the product drawer only, with a strong-rule left border, over a 22% ink scrim.
+- **Focus halo** (`box-shadow: 0 0 0 3px var(--moss-wash)`): focused inputs, selects and search, with a moss border.
 
 ### Named Rules
-**The Hairline-First Rule.** A card is a border first; its shadow must stay invisible at a glance. Only the drawer, the toast and the mobile sidebar cast a visible shadow.
-
-**The Frosted Header Rule.** Sticky bars (page header, drawer head) are canvas at 82 to 90% opacity with a 14px backdrop blur and a hairline bottom rule.
+**The One Floating Sheet Rule.** The drawer is the only surface that lifts off the page. Everything else, including sticky bars and the toast, is flat.
 
 ## Shapes
 
-Gently rounded, one family: 12px for cards, sheets and the welcome strip; 10px for figure tiles and the toast; 8px for buttons, inputs, selects, nav items and the brand mark; 6px for tags; fully round for state dots, nav counts and chart tracks (8 to 10px bar ends). Chart bars use 4px tops (2px on phones). Borders are always 1px solid hairline; the only dashed lines are the target-window edges in the cover chart and the adjusted-demand rule in the SKU chart.
+Nearly square. Controls (buttons, inputs, selects, icon buttons, toast) are 3px; tags and inline code 2px; state dots, figure dots and the dot-plot markers are round. Lines are 1px (2px for the active-tab and segmented underline, the runway line, the pull-quote aside rule and the margin note's left rule). Dashed lines mark only expectations: the edges of a target span and the demand-used-for-cover line. The front page's open quote mark is a 120px brick serif glyph.
 
 ## Components
 
+### Masthead and section bar
+- **Masthead:** serif wordmark left, italic issue line right ("No. {week} · {long date}", lining figures), then a double ink rule.
+- **Section bar:** sticky, 46px, paper with grain, strong bottom rule. Sentence-case tabs at 13.5px in ink-2 with 26px gaps; the current tab is ink, weight 600, with a 2px moss underline. Pending counts follow the label in faint, tabular. The tab row scrolls horizontally with a 28px fade at its right edge.
+- **Reading as:** a muted "Reading as" prefix with a borderless inline select ("Raghav, Planner"); right of the tabs on desktop, under the masthead under 900px.
+
+### Page head
+A small-caps kicker naming the section (Products, Exceptions, Approvals…; on the front page, "This week's call · stock as of …"), then a headline that states the finding, a serif lede, and at most one or two actions aligned to its baseline; a strong rule below. The kicker is part of the approved bulletin direction: it plays the role of a newspaper section slug, so it is always one or two plain words, never a slogan.
+
+### Front page
+- **Call:** front headline, lede with bolded quantities, a muted byline (rules version, product count, last sales week).
+- **Docket ("On Raghav's desk"):** numbered list of three rows (Reorder, Pause, Needs judgment), each a 44px serif count beside a bold label and a plain sentence, on hairlines; then one full-width 46px moss button with the count of open lines and a serif arrow, and a fine line with who holds what.
+- **Pull-quote:** brick quote mark, an italic serif sentence built from the sales rows, a sans citation, and an aside under a 2px ink rule saying why a person decides, ending in an "Open the evidence" text link.
+- **Numbered sections:** faint serif numeral, 30px head, muted standfirst, indented content.
+- **Forecast dot plot:** one row per method on a dotted hairline, a 12px ink-2 dot and a serif percentage; the worst method turns brick. "Further left is better" is written above it.
+- **Margin note:** moss-wash ground, 2px moss left rule, a bold moss-deep lead-in and one sentence.
+- **Colophon:** ink rule, an italic serif sentence on who decides, and a tabular line of rules version, run ID and "draft only, nothing leaves this app".
+
 ### Buttons
-Compact and quiet.
-- **Shape:** gently rounded (8px), 34px tall, 0 14px padding, 13px weight 550; small variant 28px tall, 12px.
-- **Primary:** Freshroots Green with white text and the primary lift shadow; hover deepens to brand-hover.
-- **Secondary:** white with a hairline border and resting shadow; hover to sunken.
-- **Quiet:** sunken ground, hairline border; used for override and cancel.
-- **Danger:** white with crit-ink text and a pale red border; hover fills crit-soft.
-- **States:** active scales to 0.98; disabled drops to 45% opacity with a not-allowed cursor; focus is a 2px green outline offset 2px.
-- **Text link:** green, 13px weight 550, underline on hover.
+- **Shape:** 3px, 36px tall, 0 16px, sans 13.5px weight 500; small is 30px tall, 0 12px, 13px. Active nudges down 1px.
+- **Primary:** moss with sheet text; hover moss-deep. A trailing arrow is set in the serif at 19px.
+- **Secondary:** transparent with a strong-rule border; hover paper-2.
+- **Quiet:** paper-2; hover paper-3; pressed (aria-pressed) inverts to ink with paper text.
+- **Danger:** transparent, brick text, a pale brick border; hover or pressed fills brick-wash.
+- **Disabled:** paper-2 ground, faint text, hairline border, not-allowed cursor.
+- **Text link:** moss, 13.5px weight 600, underline on hover. Focus everywhere is a 2px moss outline offset 2px.
 
-### Segmented control
-A 3px-padded #eceef1 track (9px radius) of 12.5px buttons; the pressed segment becomes a white 7px pill with a faint shadow. Scrolls horizontally on narrow screens. Used for filters, horizons and decision choices.
+### Segmented filter
+An underlined text row, not a pill track: 13.5px muted options 18px apart on a hairline; the pressed one is ink, weight 600, with a 2px ink underline.
 
-### Chips / Tags and state dots
-- **Tag:** 22px, 6px radius, 11.5px weight 550 on a neutral #f1f2f4 ground; tinted variants crit, warn, ok and brand use the -soft ground with -ink text; info is ink with white text.
-- **State:** a 7px round dot plus 12.5px text, the default way to show recommendation and approval status in tables.
+### States and tags
+- **State:** an 8px dot plus 13px ink-2 text. Moss dot for settled, ochre-dot for attention, brick dot and brick text for critical, ink for done or info; neutral and pending are hollow rings.
+- **Tag:** 22px, 2px radius, 12px weight 500 on paper-2; crit, warn and ok use the matching wash with brick, ochre or moss-deep text; info is ink with paper text.
 
-### Cards / Containers
-- **Corner Style:** 12px.
-- **Background:** card white on the canvas.
-- **Shadow Strategy:** resting shadow (see Elevation).
-- **Border:** 1px hairline.
-- **Internal Padding:** head 16px 18px 0 with a 14px title and 12.5px sub-line, optional right slot; body 14px 18px 18px (or flush for tables); optional footer with a soft hairline, muted 12.5px note and a text link.
+### Ruled section (Card)
+No box. A 1px ink top rule, 12px above a 22px serif title with an optional 13.5px muted sub-line and a right slot; body follows 14px below; an optional foot sits on a hairline in 13px muted text.
 
-### KPI card
-A card with 16px 18px padding: a 12.5px muted label (optionally led by an 8px state dot), the 28px tabular value (with an optional 14px muted unit), and a 12px note tinted by tone (crit-ink for worsening, warn-ink for attention, ok-ink for good). Values count up once on load.
+### Figure strip (Kpi)
+A row of figures between two strong rules, divided by hairlines. Each figure reads number first: the 40px serif value (with an optional 15px muted sans unit), then a 13px label (optionally led by an 8px dot), then a 12.5px note tinted brick when worsening, moss when good, ochre when attention is due. No count-up.
 
-### Welcome strip
-The overview's opening card: white fading to #f7faf8, 26px padding, a 24px headline, a 64ch paragraph, a row of tags, and links onward bottom-right. Behind it, a faint interactive dot grid (3px dots, 20px gap, #d5dbd8 base warming to Freshroots Green near the pointer, edges faded, no click shock), omitted under reduced motion.
+### The runway (signature)
+Every product's run-out date on a 16-week calendar that starts at the stock date. A sticky axis under the section bar labels today (ink, bold, with an ink tick) and each month start. Rows are grouped under small-caps heads (Reorder, Raghav decides, Pause, On track, each with a count) and sorted by cover. Each row is one button: the product name (14.5px, weight 500, with "perishable" beneath), a track carrying month gridlines, the product's own target span (paper-3 with dashed faint edges), a 2px line from today to the run-out date ending in a 16px tick, and the date itself; products that last beyond the calendar end in a triangle with the date inside the track and an arrow. Line, tick and date are brick for reorder, ochre for pause, ink-2 otherwise. A margin note in italic serif closes the row ("**Reorder 240** if Raghav agrees", "**Pause** 5 months of stock"). Rows the rules cannot settle carry a brick wash fading to paper. A legend states every colour in words. Under 900px only the track column remains.
 
-### Inputs / Fields
-- **Style:** white, 1px hairline, 8px radius, 13.5px text, 8px 10px padding; selects and search are 34px tall. Field labels are 12px weight 600 in ink-2 above a 6px gap.
-- **Focus:** border turns Freshroots Green with the 3px green focus halo.
-- **Role selector:** a bordered 34px control in the header with a muted "Acting as" prefix and an inline select.
-
-### Data tables
-13px cells with 11px 14px padding and soft hairline row rules; a sticky sunken header band of 11.5px muted column heads (which sticks under the page header on tall tables); numeric columns right-aligned and tabular; clickable rows tint to #f8faf9 on hover and open the SKU drawer. Under 600px rows stack into labelled two-column cards.
-
-### Navigation
-- **Sidebar:** white, 240px, hairline right rule, 18px 14px padding. Brand lock-up (28px green 8px-radius mark with a white sprout icon, "Freshroots" 15px weight 650 over an 11px muted "Demand planning") then the nav.
-- **Nav item:** 17px line icon (1.8 stroke) plus 13.5px weight 500 label, 8px 10px padding, 8px radius, ink-2; hover goes sunken with ink text; the current page takes Green Wash with Forest Ink.
-- **Counts:** a right-aligned amber pill (warn-soft, warn-ink, 11px weight 600) for pending exceptions, workbench lines and signals.
-- **Foot:** run ID, stock date and rule version in 12px muted text above a hairline, closing with "No purchase order leaves this app."
-- **Mobile:** off-canvas under 960px with an overlay shadow and scrim; scroll locks while open.
-
-### Header
-60px, sticky, frosted canvas, hairline bottom. Page title, muted crumb (date and data window), then right-aligned role selector and the page's primary action.
-
-### Drawer and toast
-The SKU drawer slides in from the right (min(640px, 100vw)) over a 28% ink scrim with a 0.5s expo-out transform; it has a frosted sticky head and holds white sheets and figure tiles (10px radius, 24px tabular numbers). The toast is ink with white text, 10px radius, rising 20px from the bottom centre; errors switch it to crit-ink.
-
-### Weeks-of-cover chart (signature)
-Every SKU on one 0 to 24 week axis: a 170px name column (bold tabular ID plus name, green on hover, opens the SKU), an 8px rounded soft-hairline track carrying the SKU's own target window as a pale green band with dashed edges, a bar coloured by state (crit below minimum, warn above maximum or high demand, slate within window), and a right-aligned tabular value tinted crit-ink or warn-ink when out of window. Rows sort by cover ascending. Bars grow from zero with a 35ms stagger when the card scrolls into view. On phones the name column narrows to the ID.
+### Product drawer
+Set like an article. Slides in from the right at min(680px, 100vw) on paper with grain, a strong left rule and the drawer-edge shadow. A sticky head on an ink rule carries the small-caps metadata line, the product name at 30px serif and a square close button. The body runs: a three-up figure row (cover, units a week, the action quantity) between hairlines, a sixteen-week chart with a legend, the decision controls with the current state, a "Why" section in prose, then disclosures (Formulas, Source rows, Data quality) with serif summaries and a serif "+" that turns to a cross. Escape and the scrim close it; page scroll locks while it is open.
 
 ### Charts
-Data-drawn SVG on white: soft gridlines, 11px muted axis text (13px in the narrow phone viewBox), monotone curves. The overall sales line is Freshroots Green at 2.2px over a 7% green area, with festival weeks shaded in 8% amber and a ringed end dot. Donuts use 20px strokes on a soft-hairline ring with a 30px tabular centre figure. Meters are 10px rounded tracks with series-coloured fills. Legends are 12px muted text with 10px rounded swatches.
+Data-drawn SVG on the paper, no animation. Gridlines are hairlines, axis text 12px muted sans (15px in the narrow viewBox). Data is ink-2 by default, earlier bars chart-bar, and only meaningful marks take brick or ochre. Festival weeks are a paper-2 band labelled "festival month" in italic serif on the chart itself. Values are written on the chart as serif callouts ("1,240 this week", "38.0 a week used for cover") so legends are needed only where a chart carries several encodings. On phones each chart switches to a narrow viewBox so type stays legible.
+
+### Inputs
+Sheet ground, strong-rule border, 3px radius, 14px text, 8px 10px padding; selects and search 36px tall. Field labels 12.5px weight 500 ink-2, 6px above. Focus turns the border moss with a 3px moss-wash halo.
+
+### Tables
+13.5px cells with 13px 12px padding on hairlines, the first column flush left; column heads 12px muted weight 500 on paper with grain above a strong rule, sticky under the section bar on tall tables; numeric columns right-aligned and tabular; clickable rows tint paper-2 on hover and open the drawer.
+
+### Toast
+Ink with paper text, 3px radius, bottom centre, rising 12px over 0.22s; errors switch it to brick.
 
 ### Motion
-- **Scroll:** Lenis (lerp 0.1) driven by the GSAP ticker, synced to ScrollTrigger; stopped while the mobile nav is open.
-- **Entrances:** on-screen cards rise 14px and fade in over 0.7s expo-out with a 35ms stagger; cards below the fold are released by an IntersectionObserver as they enter. Content is visible by default and never held hostage by script.
-- **Data:** CountUp numerals over 1.2s; lines draw on over 1.8s; bars grow over 1.1s; donut segments sweep in with an 80ms stagger; all once only.
-- **UI:** 0.15s colour transitions on controls; 0.5s page fade-rise; the shared curve is `cubic-bezier(0.16, 1, 0.3, 1)`.
-- **Reduced motion:** every animation, draw-on, count-up and the dot grid is skipped.
+- **Scroll:** native. No smooth-scroll library.
+- **Page:** content settles with a 0.24s opacity fade on `cubic-bezier(0.22, 1, 0.36, 1)`.
+- **Drawer:** 0.26s transform slide on the same curve; scrim fades over 0.2s.
+- **Controls:** 0.12s colour and border transitions; disclosure "+" rotates over 0.2s.
+- **Data:** none. Charts and figures render in place.
+- **Reduced motion:** every animation and transition collapses to 0.001ms.
+
+### Named Rules
+**The Dates Over Weeks Rule.** The runway shows when each product runs out as a calendar date, not weeks of cover. Weeks of cover appear only as a figure in the drawer, beside its target.
+
+**The Nothing Loops Rule.** No motion repeats, follows the pointer or animates data. The page fades once and the drawer slides; that is all.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** open every working page with the header (title, crumb, role selector, primary action) and a KPI row before the card grid.
-- **Do** place content in white 12px-radius cards with 1px hairline borders on the 12-column, 16px-gap grid.
-- **Do** keep Freshroots Green (#15803d) for action fills, links, focus, the brand mark and the single overall sales line.
-- **Do** use red, amber and state green only to report a condition, with the -ink step for text on white.
-- **Do** set tabular numerals on every figure and right-align numeric table columns.
-- **Do** make every number or row that has evidence open it (the SKU drawer) with one click.
-- **Do** animate with the expo-out curve, once, on entry, and skip it all under reduced motion.
+- **Do** write every headline as the finding, with a number or date from the data, followed by a serif lede.
+- **Do** keep moss for actions only: primary buttons, links, focus, the active tab.
+- **Do** pair every brick or ochre mark with words that say the same thing.
+- **Do** draw structure with rules on paper: ink to open, hairline to separate, strong rule to close.
+- **Do** set reading in Newsreader and operating in Instrument Sans, with lining tabular figures on every number.
+- **Do** label charts in place and shade festival weeks with a named band.
+- **Do** make every product row open the drawer with its evidence.
+- **Do** honour reduced motion and keep content visible without script.
 
 ### Don't:
-- **Don't** bring back full-bleed black bands, oversized display headlines or any marketing-page section rhythm.
-- **Don't** fall back to a generic grey admin template: keep the white cards, hairlines and single green accent.
-- **Don't** use Freshroots Green to tell data categories apart or to fill a control that is not an action.
-- **Don't** add visible shadows to cards; elevation is for the drawer, toast and mobile sidebar.
-- **Don't** set labels, column heads or buttons in uppercase or wide tracking.
-- **Don't** add looping or scroll-jacked animation; motion plays once and content never waits on it.
+- **Don't** bring back the dashboard: no sidebar, white cards, card shadows, rounded panels or KPI tiles.
+- **Don't** use cool greys, pure black or pure white; the palette is oat and ink.
+- **Don't** fill a button or link with brick or ochre, or use moss to tell data categories apart.
+- **Don't** let colour be the only signal of short or over stock.
+- **Don't** express the runway as weeks of cover or as a bar chart.
+- **Don't** add count-ups, draw-ons, scroll-triggered reveals, smooth scrolling or anything that loops.
+- **Don't** title a page with its name when the data supports a sentence.
