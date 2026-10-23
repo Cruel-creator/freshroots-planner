@@ -84,7 +84,9 @@ export function Backtest() {
             <li>
               {fmt(bt.observations)} predictions evaluated; {fmt(bt.excluded)} origins excluded for having fewer than 12 weeks of history.
             </li>
-            <li>15 products × 16 weeks is a small sample. Forecast accuracy is not a rupee outcome; no savings are claimed.</li>
+            <li>
+              {state.recommendations.length} products × {new Set(state.weekly.map(w => w.week)).size} weeks is a small sample. Forecast accuracy is not a rupee outcome; no savings are claimed.
+            </li>
           </ul>
         </Card>
       </div>

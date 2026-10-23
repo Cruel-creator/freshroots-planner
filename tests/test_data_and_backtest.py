@@ -40,8 +40,8 @@ def test_real_files_validate_without_errors():
     v = validate(REAL.data_dir)
     assert v.error_count == 0
     s = v.summaries
-    assert s["weekly_sales"]["rows"] == 240 and s["weekly_sales"]["unique_skus"] == 15 and s["weekly_sales"]["weeks"] == 16
-    assert s["sku_master"]["rows"] == 15 and s["current_inventory"]["rows"] == 15
+    assert s["weekly_sales"]["rows"] == 256 and s["weekly_sales"]["unique_skus"] == 16 and s["weekly_sales"]["weeks"] == 16
+    assert s["sku_master"]["rows"] == 16 and s["current_inventory"]["rows"] == 16
     assert s["calendar"]["festival_months"] == ["2025-03", "2025-10", "2025-11", "2026-03", "2026-10", "2026-11"]
     assert "case_inconsistency" in checks(v)        # Karnataka / Gujarat distributors
 
@@ -49,7 +49,7 @@ def test_real_files_validate_without_errors():
 def test_real_data_recommendations():
     a = analyse(validate(REAL.data_dir), REAL)
     r = a.recommendations.set_index("sku_id")
-    assert len(r) == 15 and a.anchor_week == "2026-W42" and a.planning_month_festival is True
+    assert len(r) == 16 and a.anchor_week == "2026-W42" and a.planning_month_festival is True
     sku1 = r.loc["SKU001"]
     assert math.isclose(sku1["demand_change_pct"], 261 / (2579 / 12) - 1)
     assert sku1["action"] == ACTION_REORDER_NOW and sku1["recommended_qty"] == 750
@@ -116,10 +116,10 @@ def test_backtest_needs_twelve_weeks():
 def test_backtest_on_real_data_is_chronological():
     a = analyse(validate(REAL.data_dir), REAL)
     bt = run_backtest(a.weekly, REAL, horizon=1)
-    assert set(bt.summary["observations"]) == {60}
+    assert set(bt.summary["observations"]) == {64}
     assert (bt.predictions["origin"] < bt.predictions["target"]).all()
     assert set(bt.predictions["target"]) == {"2026-W39", "2026-W40", "2026-W41", "2026-W42"}
-    assert len(bt.excluded) == 15 * 11
+    assert len(bt.excluded) == 16 * 11
 
 
 def test_wape_handles_zero_actuals():

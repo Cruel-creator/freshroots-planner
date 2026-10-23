@@ -158,7 +158,9 @@ export function Data() {
               <span className="tag">Not in data</span>
             </li>
             <li>
-              <span>Scale: 15 products, 16 weeks</span>
+              <span>
+                Scale: {state.recommendations.length} products, {new Set(state.weekly.map(w => w.week)).size} weeks
+              </span>
               <span className="tag warn">Sample</span>
             </li>
           </ul>

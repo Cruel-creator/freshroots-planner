@@ -3,4 +3,4 @@ distributor_master.csv,4,Region,warning,case_inconsistency,Karnataka,Case says F
 distributor_master.csv,5,Region,warning,case_inconsistency,Gujarat,Case says Freshroots operates in Maharashtra and Goa; this region is outside that scope.,False
 sku_master.csv,,Distributor_ID,info,ambiguous_definition,,Each SKU maps to exactly one distributor. The case does not define this field; it is shown as 'mapped distributor' and is not used in any calculation.,False
 weekly_sales.csv,,,info,granularity,SKU x week,"Sales are aggregated per SKU; there is no distributor column, so distributor-level demand shifts cannot be analysed from this file.",False
-weekly_sales.csv,,,info,sample_scale,"15 SKUs, 16 weeks",The case describes 400 SKUs and 3 years of history; this file is a sample. Backtest results are indicative only.,False
+weekly_sales.csv,,,info,sample_scale,"16 SKUs, 16 weeks",The case describes 400 SKUs and 3 years of history; this file is a sample. Backtest results are indicative only.,False

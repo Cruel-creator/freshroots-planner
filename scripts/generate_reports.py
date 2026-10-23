@@ -80,7 +80,7 @@ def main() -> None:
         f"Evaluated SKU-week forecasts per method: {int(s['observations'].iloc[0])}. "
         f"Excluded origins: {len(bt.excluded)} (fewer than {cfg.baseline_weeks} weeks of history).\n\n"
         "## Limits\n\n" + "\n".join(f"- {n}" for n in bt.notes) + "\n"
-        "- 15 SKUs x 16 weeks is a small sample; results are indicative only.\n"
+        f"- {a.weekly['SKU_ID'].nunique()} SKUs x {a.weekly['week'].nunique()} weeks is a small sample; results are indicative only.\n"
         "- Forecast accuracy is not a business outcome. No savings are claimed.\n", encoding="utf-8")
 
     scan_signals(a.weekly).to_csv(OUT / "operations_signals_history.csv", index=False)

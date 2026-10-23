@@ -128,13 +128,13 @@ Use **Acting as** in the sub-navigation bar (or the Streamlit sidebar) to switch
 ## What the data says (verified)
 
 - **Validation:** all five files load with 0 errors and 2 warnings. The warnings are two mapped distributors in Karnataka and Gujarat, outside the case's Maharashtra and Goa scope.
-- **Scale:** the sample has 15 SKUs × 16 weeks (2026-W27 to W42), against 400 SKUs and 3 years in the case.
+- **Scale:** the sample has 16 SKUs × 16 weeks (2026-W27 to W42), against 400 SKUs and 3 years in the case. SKU016 (Freshroots Ragi Flakes 300g) was added to the case's 15 as a prototype product.
 - **Granularity:** sales are SKU-level only, with no distributor split.
 - **Recommendations:** for an analysis date of 2026-10-19 (a festival month):
   - 5 reorders: 3 stockout-risk SKUs (SKU001 at 750 units, because it is also high demand; SKU003; SKU013) and 2 perishable replenishments (SKU004, SKU011);
   - 2 pauses (SKU006 overstock, SKU007 perishable above 4 weeks);
-  - 8 no action.
-- **Backtest (60 one-week-ahead forecasts):** the festival-uplifted estimate has **16.0% WAPE vs 8.7%** for the plain 12-week average. October sales did not rise 25% for most SKUs. The uplift needs revisiting with Raghav before any pilot.
+  - 9 no action.
+- **Backtest (64 one-week-ahead forecasts):** the festival-uplifted estimate has **16.0% WAPE vs 8.6%** for the plain 12-week average. October sales did not rise 25% for most SKUs. The uplift needs revisiting with Raghav before any pilot.
 - **Option C:** no SKU crossed a signal threshold in the latest week (W42), so no PO line is held. The history scan does detect past movements, for example SKU001's +38% spike in W39.
 
 ## Known limitations
